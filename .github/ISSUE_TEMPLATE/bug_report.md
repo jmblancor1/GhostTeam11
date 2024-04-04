@@ -10,17 +10,20 @@ assignees: ''
 **Describe the bug**
 A clear and concise description of what the bug is.
 
-**To Reproduce**
+**Comportamiento Esperado**
+A clear and concise description of what the bug is.
+
+**Comportamiento Actual**
+A clear and concise description of what the bug is.
+
+**Pasos para Reproducir el defecto**
 Steps to reproduce the behavior:
 1. Go to '...'
 2. Click on '....'
 3. Scroll down to '....'
 4. See error
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
-
-**Screenshots**
+**Imágenes**
 If applicable, add screenshots to help explain your problem.
 
 **Environment (please complete the following information):**
@@ -29,5 +32,5 @@ If applicable, add screenshots to help explain your problem.
  - Browser [e.g. stock browser, safari]
  - Version [e.g. 22]
 
-**Additional context**
+**Información Adicional**
 Add any other context about the problem here.
