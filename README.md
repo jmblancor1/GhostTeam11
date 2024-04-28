@@ -1,84 +1,36 @@
-# Pruebas automatizadas de software Grupo # 11
+# Cypress Random Tester (Monkey)
+This repository contains the code for a random tester developed using [Cypress](https://www.cypress.io/). Two versions are developed, including a full random tester and a smarter random tester, and the differences between these two remain in the type of commands that each can execute. The detail is explained in sections below
 
-<h2>Instrucciones para ejecutar los escenarios</h2>
-<lu>
-  <li>Se debe tener instalado de forma local el software Ghost</li>
-  <li>Se debe tener instalada la aplicación Cypress</li>
-  <li>Se debe tener instalada la aplicación RIPuppets</li>
-  <li>Se debe clonar el proyecto GitHub de pruebas automatizadas: git clone https://github.com/jmblancor1/GhostTeam11.git</li>
-  <li>Se debe iniciar el servicio Ghost: ghost start</li>
-  <li>Se debe ingresar al directorio donde quedó clonado el repositorio github e iniciar el servicio Cypress desde esta ubicación: cypress open
-  <li>Para iniciar los escenarios de prueba se deben seleccionar los enlaces de los archivos que presenta la interfaz Cypress</li>
-</lu>
+## How to run
+In order to use the tester, you will have to follow these steps:
+- Get the source code from this repository: Click on Download as Zip and unzip the folder in your machine or clone the repo
+- Install the required modules: Using [Node Package Manager](https://www.npmjs.com/), run `npm install` on the root folder; this will install the cypress CLI module and other dependencies, which are the [faker](https://www.npmjs.com/package/faker) module and a cypress [plugin](https://github.com/Bkucera/cypress-plugin-tab) for pressing the tab key, along with [another plugin](https://github.com/flotwig/cypress-log-to-output) for capturing the browser console output. In case you already have cypress installed, it is better to avoid installing it again in this folder; for this, run the commands `npm install faker`, `npm install -D cypress-log-to-output` and `npm install -D cypress-plugin-tab` individually.
+- Configure the desired parameters: The repository's root folder contains two JSON files which have the configuration parameters for each test. Open them and edit the parameters as needed. You can change the baseURL, the seed for the test, the percentage of events, the delay between events, and the number of events.
+- Run the desired tester: The commands for running the tests must be executed from the root folder, so do not forget to change de directory again with the `cd` command. For the random tester, run `cypress run --config-file ./monkey-config.json`. For the slightly smarter random tester, run `cypress run --config-file ./smart-monkey-config.json`. 
 
-## Ejecutar pruebas con RIPuppet
+\* Note: The default browser is Electron 78 in headless mode. In order to test another browser, add the `--browser <browser-name-or-path>` option to the run command, indicating which of the [supported browsers](https://docs.cypress.io/guides/guides/launching-browsers.html#Browsers) you want to use
 
-### Versiones usadas
+## The testers
+Cypress is an E2E test runner built over JavaScript. We used this technology due to the facility for managing web pages in a variety of browsers including Chrome, Canary, Edge, Electron, etc. and the record-and-replay functionality. The idea of the first tester is to perform a completely random test on a web application, inspired on a similar tester, the [Android Monkey](https://developer.android.com/studio/test/monkey). The second tester exists due to the high rate of errors and low probability of getting events that change the application's state of the Monkey tester.
 
-> En cuanto a las versiones que se usaron para correr las pruebas en esta herramienta, tenemos las siguientes:
->
-> - **Node:** 18.20.1
-> - **npm:** 10.5.0
-> - **playwright:** 1.43.1
->
-> Las primeras dos fueron instaladas mediante **nvm** que es un sistema gestor de versiones de Node y la última usando el comando `npm install playwright`
+## Events
+After evaluating a series of possible events, we defined the following 8 categories in which the events could be grouped by:
+- **Random Click Events**:
+Left, Right or Double clicks performed to an element from a random position
+- **Scroll Events**:
+Scrolling the page up, down, to the left or to the right.
+- **Selector Focus Events**:
+Focusing on elements from a random position, considering their HTML tags. The equivalent for pressing tab into a focusable element
+- **Keypress Events**:
+Introducing a character inside of a focused element. The equivalent for pressing a key from the keyboard when focusing an element.
+- **Special Keypress Events**:
+Typing special characters inside of a focused element. The special keys include Enter, Supr, Esc, Backspace, Arrows, and possible modifiers such as Shift, Alt or Ctrl.
+- **Page Navigation Events**:
+Typical navigation that an user could perform, go to the last page or to the next page in the navigation Stack.
+- **Browser Chaotic Events**:
+Events that change the browser configuration such as changing the viewport, clearing local storage or clearing the cookies.
+- **Selector Click Events**:
+Clicks performed to a specific type of element considering the HTML tags that typically induce an interaction such as `<a>`, `<button>`, `<input type="submit">`; also, events of filling and clearing an input element.
 
-
-### Instalación y ejecución
-
-A continuación se detallan los pasos para realizar la correcta ejecución de las pruebas de rippers con la herramienta **RIPuppet**:
-
-1. Poner a correr el proyecto de Ghost en una consola independiente que se ubicara en la raíz de este proyecto y desde allí ejecutar el comando `../node_modules/ghost-cli/bin/ghost start`.
-
-2. Clonar o hacer fork del repositorio de git dado por SoftwareDesignLab para el tutorial de rippers.
-
-`https://github.com/TheSoftwareDesignLab/RIPuppetCoursera`
-
-3. Para el correcto funcionamiento de esta herramienta fue necesario realizar dos acciones de configuración.
-
-- Para poder trabajar con las versiones mencionadas anteriormente, fue necesario borrar el archivo `package-lock.json`
-
-- En el archivo [index.js](/RIPUPPETCOURSERA/index.js) en la línea 147 fue necesario cambiar el valor de **networkidle2** por **networkidle**, ya que esta línea estaba generando error.
-
-4. Una vez hecho lo anterior se ejecutan el comando `npm install`.
-
-5. En este punto, fue necesario adicionar la lógica para que el ripper hiciera el loggeo en la aplicación de Ghost, para ello:
-
-- Primero, se adicionaron las siguientes líneas de código en la línea 85 del archivo [index.js](/RIPUPPETCOURSERA/index.js).
-
-```javascript
-const config = require('./config.json');
-// Navegar a la URL de login especificada en el archivo de configuración
-await page.goto(config.url);
-// Esperar que los campos de entrada sean visibles y llenarlos con los valores de configuración
-await page.waitForSelector('input[name="identification"]', { state: 'visible', timeout: 30000 });
-await page.fill('input[name="identification"]', config.values.identification);
-await page.fill('input[name="password"]', config.values.password);
-// Hacer clic en el botón de submit y esperar a la navegación
-await page.click('button[type="submit"]');
-await page.waitForNavigation();
-```
-
-- Luego de ello se modifico el archivo [config.json](/RIPUPPETCOURSERA/config.json) para que almacenara las credenciales para realizar el loggeo. De igual manera se ajusta el número de niveles que se requiere que recorra la prueba.
-
-```json
-{
-    "url": "http://localhost:2368/ghost/#/signin",
-    "headless": true,
-    "depthLevels": 4,
-    "inputValues": false,
-    "values": {"identification": "nombre.apellido@uniandes.edu.co",
-        "password": "contrasena123"
-        },
-    "browsers": ["chromium", "webkit", "firefox"]
-}
-```
-
-6. Ejecutar el comando `node index.js` desde la raíz del repositorio para ejecutar las pruebas y esperar a ques estas finalicen.
-
-7. Ir a la ruta `/results` y ejecutar dos comandos:
-
-- Una única vez ejecutar `npm install http-server`
-- Posteriormente y cada que se requiera visualizar nuevos resultados, ejecutar el comando `http-server`
-
-8. El último comando creará un servidor http en la dirección `http:localhost:8080` para revisar el reporte generado con todos sus resultados en los diferentes navegadores en los que se ejecutó la prueba.
+## Results
+When the test finishes running, an HTML report and a video of the execution in a browser will be generated in the results folder.
