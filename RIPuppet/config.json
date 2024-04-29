@@ -1,0 +1,10 @@
+{
+    "url": "http://localhost:2368/ghost/#/signin",
+    "headless": true,
+    "depthLevels": 1,
+    "inputValues": false,
+    "values": {"identification": "c.suarezg@uniandes.edu.co",
+        "password": "Yuliana020708"
+        },
+    "browsers": ["chromium", "webkit", "firefox"]
+}
