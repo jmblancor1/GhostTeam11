@@ -1,5 +1,10 @@
-const { After, Before } = require('@cucumber/cucumber');
+const { After, Before, BeforeAll } = require('@cucumber/cucumber');
 const { WebClient } = require('kraken-node');
+const dns = require("dns");
+
+BeforeAll(async function () {
+  dns.setDefaultResultOrder("ipv4first");
+});
 
 Before(async function() {
   this.deviceClient = new WebClient('chrome', {}, this.userId);
