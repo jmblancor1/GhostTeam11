@@ -1,0 +1,77 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "my-feature;my-scenario-2",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "My scenario 2",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "failed",
+              "duration": 706000000,
+              "error_message": "FetchError: Failed to fetch browser webSocket URL from http://localhost:61611/json/version: request to http://localhost:61611/json/version failed, reason: connect ECONNREFUSED ::1:61611\n    at ClientRequest.<anonymous> (C:\\Users\\lordm\\Documents\\MISO\\PruebasAutomatizadas\\GhostTeam11\\kraken\\node_modules\\node-fetch\\lib\\index.js:1491:11)\n    at ClientRequest.emit (node:events:517:28)\n    at ClientRequest.emit (node:domain:489:12)\n    at Socket.socketErrorListener (node:_http_client:501:9)\n    at Socket.emit (node:events:517:28)\n    at Socket.emit (node:domain:489:12)\n    at emitErrorNT (node:internal/streams/destroy:151:8)\n    at emitErrorCloseNT (node:internal/streams/destroy:116:3)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 10,
+            "name": "I wait for a signal containing \"hi\"",
+            "match": {
+              "location": "node_modules\\kraken-node\\lib\\steps\\both.js:97"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I wait",
+            "match": {
+              "location": "node_modules\\kraken-node\\lib\\steps\\both.js:61"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "failed",
+              "duration": 11000000,
+              "error_message": "TypeError: Cannot read properties of undefined (reading 'deleteSession')\n    at WebClient.<anonymous> (C:\\Users\\lordm\\Documents\\MISO\\PruebasAutomatizadas\\GhostTeam11\\kraken\\node_modules\\kraken-node\\lib\\clients\\WebClient.js:109:59)\n    at step (C:\\Users\\lordm\\Documents\\MISO\\PruebasAutomatizadas\\GhostTeam11\\kraken\\node_modules\\kraken-node\\lib\\clients\\WebClient.js:59:23)\n    at Object.next (C:\\Users\\lordm\\Documents\\MISO\\PruebasAutomatizadas\\GhostTeam11\\kraken\\node_modules\\kraken-node\\lib\\clients\\WebClient.js:40:53)\n    at C:\\Users\\lordm\\Documents\\MISO\\PruebasAutomatizadas\\GhostTeam11\\kraken\\node_modules\\kraken-node\\lib\\clients\\WebClient.js:34:71\n    at new Promise (<anonymous>)\n    at __awaiter (C:\\Users\\lordm\\Documents\\MISO\\PruebasAutomatizadas\\GhostTeam11\\kraken\\node_modules\\kraken-node\\lib\\clients\\WebClient.js:30:12)\n    at WebClient.stop (C:\\Users\\lordm\\Documents\\MISO\\PruebasAutomatizadas\\GhostTeam11\\kraken\\node_modules\\kraken-node\\lib\\clients\\WebClient.js:104:16)\n    at WebClient.<anonymous> (C:\\Users\\lordm\\Documents\\MISO\\PruebasAutomatizadas\\GhostTeam11\\kraken\\node_modules\\kraken-node\\lib\\clients\\Client.js:109:51)\n    at step (C:\\Users\\lordm\\Documents\\MISO\\PruebasAutomatizadas\\GhostTeam11\\kraken\\node_modules\\kraken-node\\lib\\clients\\Client.js:67:23)\n    at Object.next (C:\\Users\\lordm\\Documents\\MISO\\PruebasAutomatizadas\\GhostTeam11\\kraken\\node_modules\\kraken-node\\lib\\clients\\Client.js:48:53)\n    at fulfilled (C:\\Users\\lordm\\Documents\\MISO\\PruebasAutomatizadas\\GhostTeam11\\kraken\\node_modules\\kraken-node\\lib\\clients\\Client.js:39:58)"
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@user2",
+            "line": 8
+          },
+          {
+            "name": "@web",
+            "line": 8
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "my-feature",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "My feature",
+    "tags": [],
+    "uri": "features\\my_first.feature"
+  }
+]
