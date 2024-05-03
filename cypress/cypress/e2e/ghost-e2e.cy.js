@@ -1,6 +1,6 @@
 describe("logueo para acceder a las funcionalidades de ghost", () => {
   beforeEach(() => {
-    cy.visit("http://localhost:2368/ghost");
+    cy.visit("https://ghost-grupo-11.onrender.com/ghost/#/signin");
   });
 
 
