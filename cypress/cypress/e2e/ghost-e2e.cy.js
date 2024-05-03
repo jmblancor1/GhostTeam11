@@ -1,7 +1,14 @@
+
 ///<reference types="cypress"/>
 //Para que funcionen los comandos
 require('cypress-xpath');
 import MembersPO from '../support/PageObject/MembersPOM/MembersPO';
+
+describe("logueo para acceder a las funcionalidades de ghost", () => {
+  beforeEach(() => {
+    cy.visit("https://ghost-grupo-11.onrender.com/ghost/#/signin");
+  });
+
 
 
 
