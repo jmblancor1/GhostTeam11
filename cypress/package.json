@@ -4,11 +4,19 @@
   "description": "Pruebas automatizadas de la ABP Ghost",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress run"
+    "test": "npx cypress open --browser chrome --e2e"
   },
+  "keywords": [
+    "cypress",
+    "testing",
+    "javascript",
+    "ghost",
+    "pruebas",
+    "automatizadas"
+  ],
   "author": "grupo-11",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "cypress": "13.8.1"
   },
   "repository": {
