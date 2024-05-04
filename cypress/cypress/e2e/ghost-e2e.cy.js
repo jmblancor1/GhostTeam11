@@ -1,8 +1,5 @@
 describe("logueo para acceder a las funcionalidades de ghost", () => {
-  beforeEach(() => {
-    cy.visit("/#/signin");
-  });
-
+  
   it("Realizar login con datos validos", () => {
     cy.fixture("login.env.json").then((login) => {
       cy.get("#ember6").type(login.userName);
@@ -11,5 +8,12 @@ describe("logueo para acceder a las funcionalidades de ghost", () => {
     cy.get("#ember10 > span").click();
   });
 });
+
+
+
+
+
+
+
 
 
