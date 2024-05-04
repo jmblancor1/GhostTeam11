@@ -1,6 +1,6 @@
 describe("logueo para acceder a las funcionalidades de ghost", () => {
   beforeEach(() => {
-    cy.visit('/');
+    cy.visit("/#/signin");
   });
 
   // ************************************************************************************************************
