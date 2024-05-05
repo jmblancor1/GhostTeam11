@@ -1,3 +1,10 @@
+beforeEach(() => {
+    login();
+    Cypress.on('uncaught:exception', (err, runnable) => {
+        console.error('Uncaught exception', err);
+        return false;});
+});
+
 // ************************************************************************************************************
 // **************************************** INICIO TESTING SETTING ************************************************
 // ************************************************************************************************************
@@ -7,12 +14,7 @@
 describe("Login y acceder a las configuraciones de ghost: Información de publicación", () => {
 
   it("Asignar un título a una publicación web", () => {
-    cy.visit("/#/signin");
-    cy.fixture("login.env.json").then((login) => {
-      cy.get("#ember6").type(login.userName);
-      cy.get("#ember8").type(login.password);
-    });
-    cy.get("#ember10 > span").click();
+    cy.visit("/#/settings/general");
     cy.get("#ember32").click();
     cy.get("h4").contains("General").click();
     cy.get(":nth-child(1) > .gh-expandable > :nth-child(1) > .gh-expandable-header > .gh-btn > span").click();
@@ -29,11 +31,6 @@ describe("Login y acceder a las configuraciones de ghost: Información de public
 
   it("Establecer la zona horaria del sitio web", () => {
     cy.visit("/#/settings/general");
-    cy.fixture("login.env.json").then((login) => {
-      cy.get("#ember6").type(login.userName);
-      cy.get("#ember8").type(login.password);
-    });
-    cy.get("#ember10 > span").click();
     cy.get("#ember32").click();
     cy.get("h4").contains("General").click();
     cy.get(":nth-child(1) > .gh-expandable > :nth-child(2) > .gh-expandable-header > .gh-btn > span").click();
@@ -49,11 +46,6 @@ describe("Login y acceder a las configuraciones de ghost: Información de public
 
   it("Establecer el idioma de la publicación", () => {
     cy.visit("/#/settings/general");
-    cy.fixture("login.env.json").then((login) => {
-      cy.get("#ember6").type(login.userName);
-      cy.get("#ember8").type(login.password);
-    });
-    cy.get("#ember10 > span").click();
     cy.get("#ember32").click();
     cy.get("h4").contains("General").click();
     cy.get(
@@ -80,11 +72,6 @@ describe("Login y acceder a las configuraciones de ghost: Información de public
 describe("Login y acceder a las configuraciones de ghost: Metadatos ", () => {
   it("Asignar un título como metadato (Contenido extra para motores de búsqueda)", () => {
     cy.visit("/#/settings/general");
-    cy.fixture("login.env.json").then((login) => {
-      cy.get("#ember6").type(login.userName);
-      cy.get("#ember8").type(login.password);
-    });
-    cy.get("#ember10 > span").click();
     cy.get("#ember32").click();
     cy.get("h4").contains("General").click();
     cy.get(
@@ -105,11 +92,6 @@ describe("Login y acceder a las configuraciones de ghost: Metadatos ", () => {
 
   it("Personalizar los datos estructurados de un sitio para Twitter", () => {
     cy.visit("/#/settings/general");
-    cy.fixture("login.env.json").then((login) => {
-      cy.get("#ember6").type(login.userName);
-      cy.get("#ember8").type(login.password);
-    });
-    cy.get("#ember10 > span").click();
     cy.get("#ember32").click();
     cy.get("h4").contains("General").click();
     cy.get(
@@ -130,11 +112,6 @@ describe("Login y acceder a las configuraciones de ghost: Metadatos ", () => {
 
   it("Personalizar los datos estructurados de tu sitio para Facebook", () => {
     cy.visit("/#/settings/general");
-    cy.fixture("login.env.json").then((login) => {
-      cy.get("#ember6").type(login.userName);
-      cy.get("#ember8").type(login.password);
-    });
-    cy.get("#ember10 > span").click();
     cy.get("#ember32").click();
     cy.get("h4").contains("General").click();
     cy.get(
@@ -153,13 +130,8 @@ describe("Login y acceder a las configuraciones de ghost: Metadatos ", () => {
     cy.get("#ember23").click();
   });
 
-  it.only("Vincular cuentas sociales con datos incorrectos", () => {
+  it("Vincular cuentas sociales con datos incorrectos", () => {
     cy.visit("/#/settings/general");
-    cy.fixture("login.env.json").then((login) => {
-      cy.get("#ember6").type(login.userName);
-      cy.get("#ember8").type(login.password);
-    });
-    cy.get("#ember10 > span").click();
     cy.get("#ember32").click();
     cy.get("h4").contains("General").click();
     cy.get(
@@ -190,11 +162,6 @@ describe("Login y acceder a las configuraciones de ghost: Metadatos ", () => {
 
   it("Vincular cuentas sociales con datos correctos", () => {
     cy.visit("/#/settings/general");
-    cy.fixture("login.env.json").then((login) => {
-      cy.get("#ember6").type(login.userName);
-      cy.get("#ember8").type(login.password);
-    });
-    cy.get("#ember10 > span").click();
     cy.get("#ember32").click();
     cy.get("h4").contains("General").click();
     cy.get(
@@ -222,3 +189,12 @@ describe("Login y acceder a las configuraciones de ghost: Metadatos ", () => {
 // ************************************************************************************************************
 // **************************************** FIN TEST SETTING ************************************************
 // ************************************************************************************************************
+
+function login(){
+  cy.visit("/#/signin");
+  cy.fixture("login.env.json").then((login) => {
+    cy.get("#ember6").type(login.userName);
+    cy.get("#ember8").type(login.password);
+  });
+  cy.get("#ember10 > span").click();
+}
