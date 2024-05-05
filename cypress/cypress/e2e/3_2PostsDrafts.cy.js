@@ -10,7 +10,7 @@ describe('Create Post draft in Ghost', () => {
     });
 
     it('debería crear y luego editar un borrador', () => {
-        cy.visit('/ghost/#/editor/post');
+        cy.visit('/#/editor/post');
         //escribir nombre post
         cy.get('textarea[placeholder="Post title"]').type('alimentación{enter}');
         //escribir contenido del post
@@ -20,7 +20,7 @@ describe('Create Post draft in Ghost', () => {
         //se valida la creacion esitoso del post
         cy.contains('Ready, set, publish. Share it with the world.').should('be.visible');
         //accediendo a la ruta draft
-        cy.visit('/ghost/#/posts?type=draft');
+        cy.visit('/#/posts?type=draft');
         //busca el post con el paramentro y le da click
         cy.contains('alimentación').click();
         //se limpia el campo titilo y se le coloca otro valor
@@ -36,7 +36,7 @@ describe('Create Post draft in Ghost', () => {
 
     
     it('debería crear un draft post sin descripción', () => {
-        cy.visit('/ghost/#/editor/post');
+        cy.visit('/#/editor/post');
         cy.get('textarea[placeholder="Post title"]', { timeout: 10000 }).should('be.visible').type('cocina{enter}');
         cy.xpath("//span[normalize-space()='Publish']", { timeout: 10000 }).should('be.visible').click();
         cy.contains('Ready, set, publish. Share it with the world.', { timeout: 10000 }).should('be.visible');
@@ -52,7 +52,7 @@ describe('Create Post draft in Ghost', () => {
             .fill(null)
             .map(() => specialChars[Math.floor(Math.random() * specialChars.length)])
             .join('');
-        cy.visit('/ghost/#/editor/post');
+        cy.visit('/#/editor/post');
         cy.url().should('include', '/ghost/#/editor/post');
         cy.get('textarea[placeholder="Post title"]', { timeout: 10000 })
             .should('be.visible')
@@ -62,7 +62,7 @@ describe('Create Post draft in Ghost', () => {
     });
 
     it('debería crear un draft post con título y descripción validando la cantidad de palabras.', () => {
-        cy.visit('/ghost/#/editor/post');
+        cy.visit('/#/editor/post');
         cy.url().should('include', '/ghost/#/editor/post');
         cy.get('textarea[placeholder="Post title"]', { timeout: 10000 }).should('be.visible').type('Música');
         cy.get('div[data-kg="editor"]').click({ force: true }).type('La música alegra y reconforta el alma', { force: true });
@@ -74,7 +74,7 @@ describe('Create Post draft in Ghost', () => {
     
     it('debería crear un draft post con un título y contenido con caracteres especiales', () => {
         const specialCharacters = '!@#$%^&*()_+{}:"<>?[];\',./`~';
-        cy.visit('/ghost/#/editor/post');
+        cy.visit('/#/editor/post');
         cy.url().should('include', '/ghost/#/editor/post');
         cy.get('textarea[placeholder="Post title"]', { timeout: 10000 }).should('be.visible').type('Paramédicos');
     
@@ -89,7 +89,7 @@ describe('Create Post draft in Ghost', () => {
    
 });
 function login(){
-    cy.visit('https://ghost-grupo-11.onrender.com/ghost/#/signin');
+    cy.visit('/#/signin');
     cy.get('input[name="identification"]').type('df.guerrerov1@uniandes.edu.co');
     cy.get('input[name="password"]').type('qwerty1234');
     cy.get('button[type="submit"]').click();
