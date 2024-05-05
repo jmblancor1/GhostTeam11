@@ -1,8 +1,11 @@
 beforeEach(() => {
-    login();
-    Cypress.on('uncaught:exception', (err, runnable) => {
-        console.error('Uncaught exception', err);
-        return false;});
+
+  login();
+
+  Cypress.on('uncaught:exception', (err, runnable) => {
+    console.error('Uncaught exception', err);
+    return false;
+  });
 });
 
 // ************************************************************************************************************
@@ -102,7 +105,7 @@ describe("Login y acceder a las configuraciones de ghost: Metadatos ", () => {
       .invoke("val", "")
       .type("MISW-4103 - 2024-12")
       .should("have.value", "MISW-4103 - 2024-12");
-    cy.wait(3000)
+    cy.wait(3000);
     cy.get("span").contains("Save").click();
     cy.get(
       ":nth-child(1) > .gh-expandable > :nth-child(1) > .gh-expandable-header > .gh-btn > span"
@@ -130,37 +133,39 @@ describe("Login y acceder a las configuraciones de ghost: Metadatos ", () => {
     cy.get("#ember23").click();
   });
 
-  it("Vincular cuentas sociales con datos incorrectos", () => {
+  it("Vincular cuentas redes sociales con datos incorrectos", () => {
     cy.visit("/#/settings/general");
     cy.get("#ember32").click();
     cy.get("h4").contains("General").click();
     cy.get(
       ":nth-child(2) > .gh-expandable > :nth-child(4) > .gh-expandable-header > .gh-btn > span"
     ).click();
-    cy.get('input[type="url"]')
-      .eq(0)
-      .invoke("val", "")
-      .type("https://www.")
+    cy.get('input[type="url"]').eq(0).invoke("val", "").type("https://www.");
 
     cy.get('input[type="url"]')
       .eq(1)
       .invoke("val", "")
-      .type("https://twitter.com/¿?)(&%$")
+      .type("https://twitter.com/¿?)(&%$");
     cy.get('input[type="url"]')
       .eq(1)
       .should("have.value", "https://twitter.com/¿?)(&%$");
 
     cy.get(".response")
       .eq(0)
-      .should("contain", "The URL must be in a format like https://www.facebook.com/yourPage");
+      .should(
+        "contain",
+        "The URL must be in a format like https://www.facebook.com/yourPage"
+      );
 
     cy.get("span").contains("Save").click();
 
-    cy.get(".response").eq(1).should("contain", "Your Username is not a valid Twitter Username");
+    cy.get(".response")
+      .eq(1)
+      .should("contain", "Your Username is not a valid Twitter Username");
     cy.wait(3000);
   });
 
-  it("Vincular cuentas sociales con datos correctos", () => {
+  it("Vincular cuentas redes sociales con datos correctos", () => {
     cy.visit("/#/settings/general");
     cy.get("#ember32").click();
     cy.get("h4").contains("General").click();
@@ -183,6 +188,62 @@ describe("Login y acceder a las configuraciones de ghost: Metadatos ", () => {
       ":nth-child(1) > .gh-expandable > :nth-child(1) > .gh-expandable-header > .gh-btn > span"
     ).click();
     cy.get("#ember23").click();
+  });
+});
+
+
+
+// **************************************** GESTIONAR AUTORES Y COLABORADORES ************************************************
+
+describe("Login y acceder a las configuraciones de ghost: Personas (Staff)", () => {
+  it("Envíar una invitación a una nueva persona para que cree una cuenta de personal y seleccionar su rol sin e-mail", () => {
+    cy.visit("/#/settings/general");
+    cy.get("#ember32").click();
+    cy.get("h4").contains("Staff").click();
+    cy.get("span").contains("Invite people").click();
+    cy.get("#new-user-email")
+      .invoke("val", "")
+    cy.get("span").contains("Send invitation now →").click();
+    cy.get("p.response").should("contain", "Please enter an email.");
+  });
+
+  it("Envíar una invitación a una nueva persona para que cree una cuenta de personal y seleccionar su rol con e-mail válido", () => {
+    cy.visit("/#/settings/general");
+    cy.get("#ember32").click();
+    cy.get("h4").contains("Staff").click();
+    cy.get("span").contains("Invite people").click();
+    cy.get("#new-user-email")
+      .invoke("val", "")
+      .type("dafer.guerrero@gmail.com")
+      .should("have.value", "dafer.guerrero@gmail.com");
+    cy.get("span").contains("Send invitation now →").click();
+    cy.wait(2000)
+    cy.get("a.close").click();
+  });
+
+  it("Envíar una invitación a una nueva persona para que cree una cuenta de personal y seleccionar su rol a usuario ya invitado", () => {
+    cy.visit("/#/settings/general");
+    cy.get("#ember32").click();
+    cy.get("h4").contains("Staff").click();
+    cy.get("span").contains("Invite people").click();
+    cy.get("#new-user-email")
+      .invoke("val", "")
+      .type("dafer.guerrero@gmail.com")
+      .should("have.value", "dafer.guerrero@gmail.com");
+    cy.get("span").contains("Send invitation now →").click();
+    cy.get("p.response").should(
+      "contain",
+      "A user with that email address was already invited."
+    );
+  });
+
+  it("Revocar una invitación a una persona para que cree una cuenta de personal a usuario ya invitado", () => {
+    cy.visit("/#/settings/general");
+    cy.get("#ember32").click();
+    cy.get("h4").contains("Staff").click();
+    cy.wait(5000);
+    cy.get("a").contains("Revoke").click();
+    cy.get("span").should("contain", "Invitation revoked");
   });
 });
 
