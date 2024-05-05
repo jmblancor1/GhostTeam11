@@ -22,6 +22,7 @@ Scenario: Crear un miembro exitosamente
   And I wait for 3 seconds
   And I click on the link with text "Members"
   And I navigate to page "<URL_MEMBERS>"
+  And I reload the page
   And I wait for 5 seconds
   And the member with email should exist
   And I wait for 3 seconds
@@ -48,7 +49,8 @@ Scenario: Eliminar un miembro exitosamente
   And I wait for 3 seconds
   And I click on the link with text "Members"
   And I navigate to page "<URL_MEMBERS>"
-  And I wait for 6 seconds
+  And I reload the page
+  And I wait for 5 seconds
   And I handle the member with email "miembro-a-eliminar@gmail.com"
   And I click on the dropdown button
   When I click on the link with text "Delete member"
@@ -82,7 +84,8 @@ Scenario: Filtar eventos en la actividad del miembro
   And I wait for 3 seconds
   And I click on the link with text "Members"
   And I navigate to page "<URL_MEMBERS>"
-  And I wait for 6 seconds
+  And I reload the page
+  And I wait for 5 seconds
   And the member with email should exist
   And I wait for 3 seconds
   And I click on the link with text "See all member activity"

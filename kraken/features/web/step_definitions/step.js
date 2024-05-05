@@ -95,7 +95,6 @@ When(/^the tag "([^"]*)" should be deleted$/, async function (tagName) {
 /**/
 
 /* INICIO LISTADO DE STEPS PARA FUNCIONALIDAD DE PAGES */
-
 When('I click {kraken-string}', async function(site_to_visit) {
     let value = ''
 
@@ -167,6 +166,9 @@ function generateRandomEmail() {
     }
     return `${randomString}@gmail.com`;
 }
+async function reloadPage(driver) {
+    await driver.refresh();
+}
 const ids = Array.from({ length: 8 }, (_, i) => `type-${i}`);
 
 async function testCheckboxes(driver) {
@@ -207,33 +209,36 @@ When(/^I enter a random email into the input field with name "([^"]*)"$/, async 
 When(/^the member with email should exist$/, async function () {
     try {
         const expectedMemberEmail = this.lastGeneratedEmail;
-
+    
         await this.driver.waitUntil(async () => {
             const memberList = await this.driver.$$('.gh-list-data');
             return memberList.length > 0;
         });
-
+    
         const memberList = await this.driver.$$('.gh-list-data');
         let memberFound = false;
         for (const member of memberList) {
-            const emailElement = await member.$('p.gh-members-list-email');
-            const memberEmailText = await emailElement.getText();
-
-            if (memberEmailText === expectedMemberEmail) {
-                memberFound = true;
-                await member.click();
-                console.log(`Se hizo clic en el miembro con el correo electrónico "${expectedMemberEmail}".`);
-                break;
+            try {
+                const emailElement = await member.$('p.gh-members-list-email');
+                const memberEmailText = await emailElement.getText();
+    
+                if (memberEmailText === expectedMemberEmail) {
+                    memberFound = true;
+                    await member.click();
+                    console.log(`Se hizo clic en el miembro con el correo electrónico "${expectedMemberEmail}".`);
+                    break;
+                }
+            } catch (error) {
+                console.error("Error al obtener el correo electrónico del miembro:", error);
             }
         }
-
         if (!memberFound) {
             throw new Error(`El miembro con el correo electrónico "${expectedMemberEmail}" no se encontró en la lista.`);
         }
     } catch (error) {
         console.error("Error al hacer clic en el miembro:", error);
         throw error;
-    }
+    }    
 });
 When(/^I click on the dropdown button$/, async function () {
     await this.driver.waitUntil(async () => {
@@ -256,30 +261,37 @@ When(/^I handle the member with email "([^"]*)"$/, async function (memberEmail) 
             const memberList = await this.driver.$$('.gh-list-data');
             return memberList.length > 0;
         });
-
+    
         const memberList = await this.driver.$$('.gh-list-data');
         let memberFound = false;
         
         for (const member of memberList) {
-            const emailElement = await member.$('.gh-members-list-email');
-            const memberEmailText = await emailElement.getText();
-
-            if (memberEmailText === memberEmail) {
-                memberFound = true;
-                await member.click();
-                console.log(`Se hizo clic en el miembro con el correo electrónico "${memberEmail}".`);
-                break;
+            try {
+                const emailElement = await member.$('p.gh-members-list-email');
+                const memberEmailText = await emailElement.getText();
+    
+                if (memberEmailText === memberEmail) {
+                    memberFound = true;
+                    await member.click();
+                    console.log(`Se hizo clic en el miembro con el correo electrónico "${memberEmail}".`);
+                    break;
+                }
+            } catch (error) {
+                console.error("Error al obtener el correo electrónico del miembro:", error);
             }
         }
-
+    
         if (!memberFound) {
             throw new Error(`El miembro con el correo electrónico "${memberEmail}" no existe.`);
         }
     } catch (error) {
         console.error("Error al manejar el miembro:", error);
         throw error;
-    }
+    }    
 });
+When('I reload the page', async function () {
+    await reloadPage(this.driver);
+})
 
 /* FIN LISTADO DE STEPS PARA FUNCIONALIDAD DE MEMBERS */
 
