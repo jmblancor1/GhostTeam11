@@ -1,71 +1,16 @@
 beforeEach(() => {
-    login();
-    Cypress.on('uncaught:exception', (err, runnable) => {
-        console.error('Uncaught exception', err);
-        return false;});
+
+  login();
+
+  Cypress.on('uncaught:exception', (err, runnable) => {
+    console.error('Uncaught exception', err);
+    return false;
+  });
 });
 
 // ************************************************************************************************************
 // **************************************** INICIO TESTING SETTING ************************************************
 // ************************************************************************************************************
-
-// **************************************** INFORMACIÓN GENERAL ************************************************
-
-describe("Login y acceder a las configuraciones de ghost: Información de publicación", () => {
-
-  it("Asignar un título a una publicación web", () => {
-    cy.visit("/#/settings/general");
-    cy.get("#ember32").click();
-    cy.get("h4").contains("General").click();
-    cy.get(":nth-child(1) > .gh-expandable > :nth-child(1) > .gh-expandable-header > .gh-btn > span").click();
-    cy.get('input[type="text"]')
-      .eq(0)
-      .invoke("val", "")
-      .type("Grupo # 11")
-      .should("have.value", "Grupo # 11");
-    cy.wait(3000);
-    cy.get('span').contains('Save').click();
-    cy.get(":nth-child(1) > .gh-expandable > :nth-child(1) > .gh-expandable-header > .gh-btn > span").click();
-    cy.get("#ember23").click();
-  });
-
-  it("Establecer la zona horaria del sitio web", () => {
-    cy.visit("/#/settings/general");
-    cy.get("#ember32").click();
-    cy.get("h4").contains("General").click();
-    cy.get(":nth-child(1) > .gh-expandable > :nth-child(2) > .gh-expandable-header > .gh-btn > span").click();
-    cy.get("select")
-      .select("America/Bogota")
-      .should("have.value", "America/Bogota")
-      .contains("(GMT -5:00) Bogota, Lima, Quito")
-    cy.wait(3000);
-    cy.get("span").contains("Save").click();
-    cy.get(":nth-child(1) > .gh-expandable > :nth-child(2) > .gh-expandable-header > .gh-btn > span").click();
-    cy.get("#ember23").click();
-  })
-
-  it("Establecer el idioma de la publicación", () => {
-    cy.visit("/#/settings/general");
-    cy.get("#ember32").click();
-    cy.get("h4").contains("General").click();
-    cy.get(
-      ":nth-child(1) > .gh-expandable > :nth-child(3) > .gh-expandable-header > .gh-btn > span"
-    ).click();
-    cy.get('input[type="text"]')
-      .eq(0)
-      .invoke("val", "") // Limpia el campo de texto si hay algún valor previo
-      .type("es")
-      .should("have.value", "es");
-    cy.wait(3000);
-    cy.get("span").contains("Save").click();
-    cy.get(
-      ":nth-child(1) > .gh-expandable > :nth-child(3) > .gh-expandable-header > .gh-btn > span"
-    ).click();
-    cy.get("#ember23").click();
-  });
-
-});
-
 
 // **************************************** METADATOS ************************************************
 
@@ -102,7 +47,7 @@ describe("Login y acceder a las configuraciones de ghost: Metadatos ", () => {
       .invoke("val", "")
       .type("MISW-4103 - 2024-12")
       .should("have.value", "MISW-4103 - 2024-12");
-    cy.wait(3000)
+    cy.wait(3000);
     cy.get("span").contains("Save").click();
     cy.get(
       ":nth-child(1) > .gh-expandable > :nth-child(1) > .gh-expandable-header > .gh-btn > span"
@@ -130,37 +75,39 @@ describe("Login y acceder a las configuraciones de ghost: Metadatos ", () => {
     cy.get("#ember23").click();
   });
 
-  it("Vincular cuentas sociales con datos incorrectos", () => {
+  it("Vincular cuentas redes sociales con datos incorrectos", () => {
     cy.visit("/#/settings/general");
     cy.get("#ember32").click();
     cy.get("h4").contains("General").click();
     cy.get(
       ":nth-child(2) > .gh-expandable > :nth-child(4) > .gh-expandable-header > .gh-btn > span"
     ).click();
-    cy.get('input[type="url"]')
-      .eq(0)
-      .invoke("val", "")
-      .type("https://www.")
+    cy.get('input[type="url"]').eq(0).invoke("val", "").type("https://www.");
 
     cy.get('input[type="url"]')
       .eq(1)
       .invoke("val", "")
-      .type("https://twitter.com/¿?)(&%$")
+      .type("https://twitter.com/¿?)(&%$");
     cy.get('input[type="url"]')
       .eq(1)
       .should("have.value", "https://twitter.com/¿?)(&%$");
 
     cy.get(".response")
       .eq(0)
-      .should("contain", "The URL must be in a format like https://www.facebook.com/yourPage");
+      .should(
+        "contain",
+        "The URL must be in a format like https://www.facebook.com/yourPage"
+      );
 
     cy.get("span").contains("Save").click();
 
-    cy.get(".response").eq(1).should("contain", "Your Username is not a valid Twitter Username");
+    cy.get(".response")
+      .eq(1)
+      .should("contain", "Your Username is not a valid Twitter Username");
     cy.wait(3000);
   });
 
-  it("Vincular cuentas sociales con datos correctos", () => {
+  it("Vincular cuentas redes sociales con datos correctos", () => {
     cy.visit("/#/settings/general");
     cy.get("#ember32").click();
     cy.get("h4").contains("General").click();
@@ -185,6 +132,8 @@ describe("Login y acceder a las configuraciones de ghost: Metadatos ", () => {
     cy.get("#ember23").click();
   });
 });
+
+
 
 // ************************************************************************************************************
 // **************************************** FIN TEST SETTING ************************************************
