@@ -9,7 +9,7 @@ Scenario: Crear un tag exitosamente
   And I click next
   And I wait for 1 seconds
   And I navigate to page "https://ghost-grupo-11.onrender.com/ghost/#/dashboard"
-  And I wait for 3 seconds
+  And I wait for 5 seconds
   And I click on the link with text "Tags"
   And I wait for 1 seconds
   When I click on the link with text "New tag"
@@ -34,7 +34,7 @@ Scenario: Eliminar un tag exitosamente
   And I click next
   And I wait for 1 seconds
   And I navigate to page "https://ghost-grupo-11.onrender.com/ghost/#/dashboard"
-  And I wait for 3 seconds
+  And I wait for 5 seconds
   And I click on the link with text "Tags"
   And I wait for 1 seconds
   And I click on the link with text "New tag"

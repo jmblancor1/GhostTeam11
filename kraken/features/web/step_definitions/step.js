@@ -1,5 +1,6 @@
 const { Given, When, Then } = require('@cucumber/cucumber');
 
+/* INICIO LISTADO DE STEPS GENERALES */
 When('I enter email {kraken-string}', async function (email) {
     let element = await this.driver.$('#ember6');
     return await element.setValue(email);
@@ -12,21 +13,22 @@ When('I click next', async function() {
     let element = await this.driver.$('#ember10');
     return await element.click();
 })
-
-
-/* INICIO LISTADO DE STEPS PARA FUNCIONALIDAD DE TAGS */
-
+When(/^I enter "([^"]*)" into the input field with name "([^"]*)"$/, async function (value, name) {
+    const inputField = await this.driver.$(`input[name="${name}"]`);
+    await inputField.setValue(value);
+});
 When(/^I click on the link with text "([^"]*)"$/, async function (linkText) {
     const link = await this.driver.$(`//*[contains(text(), "${linkText}")]`);
     await link.click();
 });
+/* FIN LISTADO DE STEPS DE STEPS GENERALES */
+
+
+/* INICIO LISTADO DE STEPS PARA FUNCIONALIDAD DE TAGS */
+
 When('I enter tag name {kraken-string}', async function (tag) {
     let element = await this.driver.$('#tag-name');
     return await element.setValue(tag);
-});
-When(/^I enter "([^"]*)" into the input field with name "([^"]*)"$/, async function (value, name) {
-    const inputField = await this.driver.$(`input[name="${name}"]`);
-    await inputField.setValue(value);
 });
 When('I enter description {kraken-string}', async function (description) {
     let element = await this.driver.$('#tag-description');
@@ -60,7 +62,6 @@ When(/^the modal with text "([^"]*)" should exist$/, async function (modalText) 
         throw new Error(`El texto del encabezado del modal no coincide. Se esperaba "${modalText}" pero se encontró "${headerText}".`);
     }
 });
-
 When(/^I click on the "([^"]*)" button in the modal footer$/, async function (buttonText) {
     await this.driver.waitUntil(async () => {
         const modal = await this.driver.$('.modal-content');
@@ -69,7 +70,6 @@ When(/^I click on the "([^"]*)" button in the modal footer$/, async function (bu
     const deleteButton = await this.driver.$('.modal-footer .gh-btn-red');
     await deleteButton.click();
 });
-
 When(/^the tag "([^"]*)" should be deleted$/, async function (tagName) {
     await this.driver.waitUntil(async () => {
         const tags = await this.driver.$$('.gh-tags-list-item');
