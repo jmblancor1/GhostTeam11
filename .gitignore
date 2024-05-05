@@ -1,6 +1,11 @@
+cypress/cypress/integration/monkey/node_modules/
 cypress/integration/monkey/node_modules/
+cypress/cypress/screenshots
 cypress/screenshots
+cypress/cypress/videos
 cypress/videos
+cypress/cypress/node_modules/
+cypress/node_modules/
 node_modules/
 results/
 reports/
