@@ -1,5 +1,5 @@
 const { Given, When, Then } = require('@cucumber/cucumber');
-
+const { assert } = require('chai');
 /* INICIO LISTADO DE STEPS GENERALES */
 When('I enter email {kraken-string}', async function (email) {
     let element = await this.driver.$('#ember6');
@@ -86,4 +86,132 @@ When(/^the tag "([^"]*)" should be deleted$/, async function (tagName) {
         console.log(`El tag "${tagName}" ha sido eliminado correctamente.`);
     }
 });
+
 /* FIN LISTADO DE STEPS PARA FUNCIONALIDAD DE TAGS */
+
+/**/
+/**/
+/**/
+
+/* INICIO LISTADO DE STEPS PARA FUNCIONALIDAD DE MEMBERS */
+
+function generateRandomEmail() {
+    const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
+    let randomString = '';
+    for (let i = 0; i < 10; i++) {
+        randomString += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+    return `${randomString}@gmail.com`;
+}
+const ids = Array.from({ length: 8 }, (_, i) => `type-${i}`);
+
+async function testCheckboxes(driver) {
+    for (const id of ids) {
+        const checkbox = await driver.$(`label[for="${id}"]`);
+        const input = await driver.$(`#${id}`);
+        const isChecked = await input.isSelected();
+
+        if (isChecked) {
+            await checkbox.click();
+            await driver.pause(1000);
+            console.log(`Se desclickeó el checkbox con ID ${id}.`);
+        } else {
+            await checkbox.click();
+            await driver.pause(1000);
+            console.log(`Se clickeó el checkbox con ID ${id}.`);
+        }
+
+        const updatedIsChecked = await input.isSelected();
+        assert.strictEqual(updatedIsChecked, !isChecked, `El estado del checkbox con ID ${id} no se actualizó correctamente.`);
+    }
+}
+When(/^I enter "([^"]*)" into the textarea field with name "([^"]*)"$/, async function (value, name) {
+    const textArea = await this.driver.$(`textarea[name="${name}"]`);
+    await textArea.setValue(value);
+});
+When(/^I enter a random email into the input field with name "([^"]*)"$/, async function (fieldName) {
+    const randomEmail = generateRandomEmail();
+    const emailInput = await this.driver.$(`input[name="${fieldName}"]`);
+    await emailInput.setValue(randomEmail);
+    this.lastGeneratedEmail = randomEmail;
+});
+When(/^the member with email should exist$/, async function () {
+    try {
+        const expectedMemberEmail = this.lastGeneratedEmail;
+
+        await this.driver.waitUntil(async () => {
+            const memberList = await this.driver.$$('.gh-list-data');
+            return memberList.length > 0;
+        });
+
+        const memberList = await this.driver.$$('.gh-list-data');
+        let memberFound = false;
+        for (const member of memberList) {
+            const emailElement = await member.$('p.gh-members-list-email');
+            const memberEmailText = await emailElement.getText();
+
+            if (memberEmailText === expectedMemberEmail) {
+                memberFound = true;
+                await member.click();
+                console.log(`Se hizo clic en el miembro con el correo electrónico "${expectedMemberEmail}".`);
+                break;
+            }
+        }
+
+        if (!memberFound) {
+            throw new Error(`El miembro con el correo electrónico "${expectedMemberEmail}" no se encontró en la lista.`);
+        }
+    } catch (error) {
+        console.error("Error al hacer clic en el miembro:", error);
+        throw error;
+    }
+});
+When(/^I click on the dropdown button$/, async function () {
+    await this.driver.waitUntil(async () => {
+        const dropdownElement = await this.driver.$('.dropdown');
+        return await dropdownElement.isDisplayed();
+    });
+    const dropdownButton = await this.driver.$('.dropdown button');
+    await dropdownButton.click();
+});
+When(/^I click filter button$/, async function () {
+    const filterButton = await this.driver.$('div.gh-btn.gh-btn-icon.gh-btn-action-icon');
+    await filterButton.click();
+});
+When('I check and uncheck the checkboxes', async function () {
+    await testCheckboxes(this.driver);
+});
+When(/^I handle the member with email "([^"]*)"$/, async function (memberEmail) {
+    try {
+        await this.driver.waitUntil(async () => {
+            const memberList = await this.driver.$$('.gh-list-data');
+            return memberList.length > 0;
+        });
+
+        const memberList = await this.driver.$$('.gh-list-data');
+        let memberFound = false;
+        
+        for (const member of memberList) {
+            const emailElement = await member.$('.gh-members-list-email');
+            const memberEmailText = await emailElement.getText();
+
+            if (memberEmailText === memberEmail) {
+                memberFound = true;
+                await member.click();
+                console.log(`Se hizo clic en el miembro con el correo electrónico "${memberEmail}".`);
+                break;
+            }
+        }
+
+        if (!memberFound) {
+            throw new Error(`El miembro con el correo electrónico "${memberEmail}" no existe.`);
+        }
+    } catch (error) {
+        console.error("Error al manejar el miembro:", error);
+        throw error;
+    }
+});
+
+/* FIN LISTADO DE STEPS PARA FUNCIONALIDAD DE MEMBERS */
+
+module.exports = { generateRandomEmail };
