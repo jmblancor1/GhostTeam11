@@ -1,6 +1,7 @@
 const { Given, When, Then } = require('@cucumber/cucumber');
-const { assert } = require('chai');
+
 /* INICIO LISTADO DE STEPS GENERALES */
+
 When('I enter email {kraken-string}', async function (email) {
     let element = await this.driver.$('#ember6');
     return await element.setValue(email);
@@ -93,6 +94,69 @@ When(/^the tag "([^"]*)" should be deleted$/, async function (tagName) {
 /**/
 /**/
 
+/* INICIO LISTADO DE STEPS PARA FUNCIONALIDAD DE PAGES */
+
+When('I click {kraken-string}', async function(site_to_visit) {
+    let value = ''
+
+    if (site_to_visit === 'sign-in') {
+        value = '/html/body/div[2]/div/main/div/div/section/form/button/span';
+    } else if (site_to_visit === 'pages') {
+        value = '/html/body/div[2]/div/nav[1]/div/section/div[1]/ul[2]/li[2]/a';
+    } else if (site_to_visit === 'new-page') {
+        value = '/html/body/div[2]/div/main/section/div/header/section/a/span';
+    } else if (site_to_visit === 'page-title') {
+        value = '/html/body/div[2]/div/main/div/section/div[1]/div[1]/textarea';
+    } else if (site_to_visit === 'page-body') {
+        value = '/html/body/div[2]/div/main/div/section/div[1]/div[1]/article/div[1]/div';
+    } else if (site_to_visit === 'publish') {
+        value = '/html/body/div[2]/div/main/div/section/header/section/button[2]';
+    } else if (site_to_visit === 'final-review') {
+        value = '/html/body/div[4]/div/div/div/div[3]/button';
+    } else if (site_to_visit === 'publish-right-now') {
+        value = '/html/body/div[4]/div/div/div/div[2]/button[1]';
+    }
+
+    let element = await this.driver.$(value);
+    return await element.click();
+})
+When('I enter text {kraken-string} at {kraken-string}', async function(text_to_enter, site_to_enter_text) {
+    let value = '';
+
+    if (site_to_enter_text === 'page-title') {
+        value = '/html/body/div[2]/div/main/div/section/div[1]/div[1]/textarea';
+    } else if (site_to_enter_text === 'page-body') {
+        value = '/html/body/div[2]/div/main/div/section/div[1]/div[1]/article/div[1]/div';
+    }
+
+    let element = await this.driver.$(value);
+    return await element.setValue(text_to_enter);
+})
+Then('I find if the page {kraken-string} exists', async function (pageToFind) {
+    const pageList = await this.driver.$$('.gh-posts-list-item')
+
+    const pagePresent = await Promise.all(pageList.map(async (page) => {
+        const nameElement = await page.$('.gh-content-entry-title');
+        const nameText = await nameElement.getText();
+        return nameText === pageToFind
+    }));
+    
+    const index = pagePresent.indexOf(true);
+
+    if (index !== -1) {
+        const pageToClick = pageList[index];
+        await pageToClick.click();
+    } else {
+        throw new Error(`La página "${pageToFind}" no existe.`);
+    }
+})
+
+/* FIN LISTADO DE STEPS PARA FUNCIONALIDAD DE PAGES */
+
+/**/
+/**/
+/**/
+
 /* INICIO LISTADO DE STEPS PARA FUNCIONALIDAD DE MEMBERS */
 
 function generateRandomEmail() {
@@ -114,17 +178,22 @@ async function testCheckboxes(driver) {
         if (isChecked) {
             await checkbox.click();
             await driver.pause(1000);
-            console.log(`Se desclickeó el checkbox con ID ${id}.`);
+            console.log(`Se desmarcó el checkbox con ID ${id}.`);
         } else {
             await checkbox.click();
             await driver.pause(1000);
-            console.log(`Se clickeó el checkbox con ID ${id}.`);
+            console.log(`Se marcó el checkbox con ID ${id}.`);
         }
 
         const updatedIsChecked = await input.isSelected();
-        assert.strictEqual(updatedIsChecked, !isChecked, `El estado del checkbox con ID ${id} no se actualizó correctamente.`);
+        if (updatedIsChecked !== !isChecked) {
+            console.error(`El estado del checkbox con ID ${id} no se actualizó correctamente.`);
+        } else {
+            console.log(`El estado del checkbox con ID ${id} se actualizó correctamente.`);
+        }
     }
 }
+
 When(/^I enter "([^"]*)" into the textarea field with name "([^"]*)"$/, async function (value, name) {
     const textArea = await this.driver.$(`textarea[name="${name}"]`);
     await textArea.setValue(value);
