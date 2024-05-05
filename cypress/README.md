@@ -35,34 +35,34 @@ A continuación se detallan los pasos para realizar la correcta ejecución de la
 
 7. Se debe abrir una instancia de Cypress para configurar las pruebas a ejecutar.
 
-![cypress open](assets/1.png)
+![cypress paso 7](assets/1.png)
 
 8. Dar clic en _Add project_ y luego en _browse manually_.
 
-![cypress open](assets/2.png)
+![cypress paso 8](assets/2.png)
 
 9. Seleccionar la carpeta _cypress_ presente en la raíz del repositorio y dar clic en _Select folder_.
 
-![cypress open](assets/3.png)
+![cypress paso 9](assets/3.png)
 
 10. Seleccionar la opción _E2E testing_.
 
-![cypress open](assets/4.png)
+![cypress paso 10](assets/4.png)
 
 11. Dar clic en _Continue_.
 
-![cypress open](assets/5.png)
+![cypress paso 11](assets/5.png)
 
 12. Dar clic en _Start E2E testing in Chrome_. Este paso abrirá una instancia del navegador Chrome para ejecutar las pruebas E2E.
 
-![cypress open](assets/6.png)
+![cypress paso 12](assets/6.png)
 
 13. Dar clic en cada test a ejecutar.
 
-![cypress open](assets/7.png)
+![cypress paso 13](assets/7.png)
 
 14. Para volver al listado de pruebas y ejecutar otro test, se debe dar clic en _Specs_.
 
-![cypress open](assets/8.png)
+![cypress paso 14](assets/8.png)
 
 15. Repetir los pasos 13 y 14 hasta finalizar la ejecución de todas las pruebas.
