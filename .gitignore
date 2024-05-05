@@ -9,3 +9,4 @@ cypress/node_modules/
 node_modules/
 results/
 reports/
+kraken/reports/
