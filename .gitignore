@@ -4,3 +4,4 @@ cypress/videos
 node_modules/
 results/
 reports/
+kraken/reports/
