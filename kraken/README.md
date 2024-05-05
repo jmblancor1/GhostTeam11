@@ -19,12 +19,16 @@ A continuación se detallan los pasos para realizar la correcta ejecución de la
 
 2. Abrir un consola cmd o git bash en la ruta donde se haya clonado el repositorio.
 
-3. Eliminar el archivo `package-lock.json` presente en la ruta `/kraken`.
+3. Ubicarse en la ruta `\kraken`.
 
-4. Instalar las dependencias requeridas con el comando 
+    `cd kraken`
+
+4. En un explorador de archivos, ubicar en esta ruta el archivo `package-lock.json` y eliminarlo.
+
+5. Instalar las dependencias requeridas con el comando 
 
     `npm install`.
 
-5. Ejecutar las pruebas con el comando 
+6. Ejecutar las pruebas con el comando 
     
     `./node_modules/kraken-node/bin/kraken-node run`.

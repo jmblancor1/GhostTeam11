@@ -19,46 +19,50 @@ A continuación se detallan los pasos para realizar la correcta ejecución de la
 
 2. Abrir un consola cmd o git bash en la ruta donde se haya clonado el repositorio.
 
-3. Eliminar el archivo `package-lock.json` presente en la ruta `/cypress`.
+3. Ubicarse en la ruta `\cypress`.
 
-4. Instalar las dependencias requeridas con el comando 
+    `cd cypress`
+
+4. En un explorador de archivos, ubicar en esta ruta el archivo `package-lock.json` y eliminarlo.
+
+5. Instalar las dependencias requeridas con el comando 
 
     `npm install`.
 
-5. Ejecutar las pruebas con el comando 
+6. Ejecutar las pruebas con el comando 
     
     `cypress open`.
 
-6. Se debe abrir una instancia de Cypress para configurar las pruebas a ejecutar.
+7. Se debe abrir una instancia de Cypress para configurar las pruebas a ejecutar.
 
-![cypress open](cypress/assets/1.png)
+![cypress paso 7](assets/1.png)
 
-7. Dar clic en _Add project_ y luego en _browse manually_.
+8. Dar clic en _Add project_ y luego en _browse manually_.
 
-![cypress open](cypress/assets/2.png)
+![cypress paso 8](assets/2.png)
 
-8. Seleccionar la carpeta _cypress_ presente en la raíz del repositorio y dar clic en _Select folder_.
+9. Seleccionar la carpeta _cypress_ presente en la raíz del repositorio y dar clic en _Select folder_.
 
-![cypress open](cypress/assets/3.png)
+![cypress paso 9](assets/3.png)
 
-9. Seleccionar la opción _E2E testing_.
+10. Seleccionar la opción _E2E testing_.
 
-![cypress open](cypress/assets/4.png)
+![cypress paso 10](assets/4.png)
 
-10. Dar clic en _Continue_.
+11. Dar clic en _Continue_.
 
-![cypress open](cypress/assets/5.png)
+![cypress paso 11](assets/5.png)
 
-11. Dar clic en _Start E2E testing in Chrome_. Este paso abrirá una instancia del navegador Chrome para ejecutar las pruebas E2E.
+12. Dar clic en _Start E2E testing in Chrome_. Este paso abrirá una instancia del navegador Chrome para ejecutar las pruebas E2E.
 
-![cypress open](cypress/assets/6.png)
+![cypress paso 12](assets/6.png)
 
-12. Dar clic en cada test a ejecutar.
+13. Dar clic en cada test a ejecutar.
 
-![cypress open](cypress/assets/7.png)
+![cypress paso 13](assets/7.png)
 
-13. Para volver al listado de pruebas y ejecutar otro test, se debe dar clic en _Specs_.
+14. Para volver al listado de pruebas y ejecutar otro test, se debe dar clic en _Specs_.
 
-![cypress open](cypress/assets/8.png)
+![cypress paso 14](assets/8.png)
 
-14. Repetir los pasos 12 y 13 hasta finalizar la ejecución de todas las pruebas.
+15. Repetir los pasos 13 y 14 hasta finalizar la ejecución de todas las pruebas.
