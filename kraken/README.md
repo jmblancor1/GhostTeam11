@@ -19,7 +19,7 @@ A continuación se detallan los pasos para realizar la correcta ejecución de la
 
 2. Abrir un consola cmd o git bash en la ruta donde se haya clonado el repositorio.
 
-3. Ubicarse en la ruta `\kraken`.
+3. Ubicarse en la ruta "_\kraken_".
 
     `cd kraken`
 
@@ -29,6 +29,12 @@ A continuación se detallan los pasos para realizar la correcta ejecución de la
 
     `npm install`.
 
+6. Debido a que la herramienta solo permite ejecutar un feature a la vez, es necesario mover de ubicación el archivo _.feature_ de cada funcionalidad a probar.
+
+    De acuerdo con lo anterior, en un explorador de archivos debe ubicarse el archivo a copiar en la ruta  "_\kraken\features\feature_definitions"_ y pegarlo en la ruta "_\kraken\features_".
+
 6. Ejecutar las pruebas con el comando 
     
     `./node_modules/kraken-node/bin/kraken-node run`.
+
+7. Repetir los pasos 5 y 6 hasta finalizar la ejecución de todas las pruebas.
