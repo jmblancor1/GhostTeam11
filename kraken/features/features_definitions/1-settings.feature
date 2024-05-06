@@ -90,7 +90,7 @@ Scenario: Vincular cuentas de redes sociales con datos incorrectos
     And I enter text "https://facebook.com/¿?&%$" at "social-facebook-page"
     And I enter text "https://twitter.com/¿?&%$" at "social-twitter-profile"
     And I click "social-accounts-title"
-    And I compare text "The URL must be in a format like https://www.facebook.com/yourPage" at "error-twitter"
+    And I compare text "The URL must be in a format like https://www.facebook.com/yourPage" at "error-facebook"
     And I compare text "Your Username is not a valid Twitter Username" at "error-twitter"
 
 @user5 @web
