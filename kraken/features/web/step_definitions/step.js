@@ -329,6 +329,26 @@ When('I find if the page {kraken-string} do not exist', async function (pageToNo
         throw new Error(`La página "${pageToNotFind}" aún existe.`);
     }
 })
+When('I clear text at {kraken-string}', async function(site_to_clear) {
+    let value = '';
+
+    if (site_to_clear == 'hour-field') {
+        value = '/html/body/div[2]/div/main/div/div/div/div/div[2]/form/div[2]/div/div[2]/input';
+    } else if (site_to_clear === 'social-facebook-page') {
+        value = '/html/body/div[2]/div/main/section/div[2]/div[2]/section/div[4]/div[2]/div/div/div/div[1]/input';
+    } else if (site_to_clear === 'social-twitter-profile') {
+        value = '/html/body/div[2]/div/main/section/div[2]/div[2]/section/div[4]/div[2]/div/div/div/div[2]/input';
+    } else if (site_to_clear === 'meta-title') {
+        value = '/html/body/div[2]/div/main/section/div[2]/div[2]/section/div[1]/div[2]/div/div/div/div/div[1]/div[1]/input';
+    } else if (site_to_clear === 'twitter-title') {
+        value = '/html/body/div[2]/div/main/section/div[2]/div[2]/section/div[2]/div[2]/div/div/div/div/div[1]/div[2]/input';
+    } else if (site_to_clear === 'facebook-title') {
+        value = '/html/body/div[2]/div/main/section/div[2]/div[2]/section/div[3]/div[2]/div/div/div/div/div[1]/div[2]/input';
+    }
+
+    let element = await this.driver.$(value);
+    return await element.clearValue();
+})
 
 /* FIN LISTADO DE STEPS PARA FUNCIONALIDAD DE PAGES */
 

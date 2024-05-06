@@ -15,6 +15,7 @@ Scenario: Acceder a las configuraciones de ghost (metadatos)
     And I wait for 1 seconds
     And I click "meta-data"
     And I wait for 1 seconds
+    And I clear text at "meta-title"
     And I enter text "Grupo 11" at "meta-title"
     And I wait for 1 seconds
     And I click "save-settings"
@@ -39,6 +40,7 @@ Scenario: Personalizar los datos estructurados de un sitio para Twitter
     And I wait for 1 seconds
     And I click "twitter"
     And I wait for 1 seconds
+    And I clear text at "twitter-title"
     And I enter text "Grupo 11 Twitter" at "twitter-title"
     And I wait for 1 seconds
     And I click "save-settings"
@@ -63,6 +65,7 @@ Scenario: Personalizar los datos estructurados de un sitio para Facebook
     And I wait for 1 seconds
     And I click "facebook"
     And I wait for 1 seconds
+    And I clear text at "facebook-title"
     And I enter text "Grupo 11 Facebook" at "facebook-title"
     And I wait for 1 seconds
     And I click "save-settings"
@@ -87,7 +90,9 @@ Scenario: Vincular cuentas de redes sociales con datos incorrectos
     And I wait for 1 seconds
     And I click "social-accounts"
     And I wait for 1 seconds
+    And I clear text at "social-facebook-page"
     And I enter text "https://facebook.com/¿?&%$" at "social-facebook-page"
+    And I clear text at "social-twitter-profile"
     And I enter text "https://twitter.com/¿?&%$" at "social-twitter-profile"
     And I click "social-accounts-title"
     And I compare text "The URL must be in a format like https://www.facebook.com/yourPage" at "error-facebook"
@@ -108,7 +113,9 @@ Scenario: Vincular cuentas de redes sociales con datos correctos
     And I wait for 1 seconds
     And I click "social-accounts"
     And I wait for 1 seconds
+    And I clear text at "social-facebook-page"
     And I enter text "https://facebook.com/MISO-Grupo-11" at "social-facebook-page"
+    And I clear text at "social-twitter-profile"
     And I enter text "https://twitter.com/MISO-Grupo-11" at "social-twitter-profile"
     And I click "save-settings"
     Then I reload the page
