@@ -28,12 +28,14 @@ A continuación se detallan los pasos para realizar la correcta ejecución de la
 5. Instalar las dependencias requeridas con el comando 
 
     `npm install`.
+6. Instalar la dependencia de xpath
+    `npm install -D cypress-xpath`   
 
-6. Ejecutar las pruebas con el comando 
+8. Ejecutar las pruebas con el comando 
     
     `cypress open`.
 
-7. Se debe abrir una instancia de Cypress para configurar las pruebas a ejecutar.
+9. Se debe abrir una instancia de Cypress para configurar las pruebas a ejecutar.
 
 ![cypress paso 7](assets/1.png)
 
