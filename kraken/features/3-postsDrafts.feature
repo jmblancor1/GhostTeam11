@@ -157,6 +157,4 @@ Feature: Post Drafts en Ghost
     And I wait for 2 seconds
     Then the post "New post for Publishing" should be present in the publish post list
     And I wait for 2 seconds
-
-
-    
+  

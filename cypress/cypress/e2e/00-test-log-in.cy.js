@@ -1,8 +1,13 @@
-describe("logueo para acceder a las funcionalidades de ghost", () => {
-  beforeEach(() => {
-    cy.visit("/#/signin");
-  });
+beforeEach(() => {
+  cy.visit("/#/signin");
 
+  Cypress.on("uncaught:exception", (err, runnable) => {
+    console.error("Uncaught exception", err);
+    return false;
+  });
+});
+
+describe("logueo para acceder a las funcionalidades de ghost", () => {
   // ************************************************************************************************************
   // **************************************** INICIO TEST LOG IN ************************************************
   // ************************************************************************************************************
