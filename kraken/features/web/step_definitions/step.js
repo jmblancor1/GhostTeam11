@@ -87,7 +87,6 @@ When(/^the tag "([^"]*)" should be deleted$/, async function (tagName) {
         console.log(`El tag "${tagName}" ha sido eliminado correctamente.`);
     }
 });
-<<<<<<< HEAD
 /* FIN LISTADO DE STEPS PARA FUNCIONALIDAD DE TAGS */
 
 
@@ -185,9 +184,6 @@ When('And I click Publish', async function () {
   });
 
 /* FIN LISTADO DE STEPS PARA FUNCIONALIDAD DE POSTS*/
-=======
-
-/* FIN LISTADO DE STEPS PARA FUNCIONALIDAD DE TAGS */
 
 /**/
 /**/
@@ -395,4 +391,3 @@ When('I reload the page', async function () {
 /* FIN LISTADO DE STEPS PARA FUNCIONALIDAD DE MEMBERS */
 
 module.exports = { generateRandomEmail };
->>>>>>> 0574c9eca96a04edf0bbe86660177342e14656fe
