@@ -1,9 +1,10 @@
-beforeEach(() => {
+require("cypress-xpath");
 
+beforeEach(() => {
   login();
 
-  Cypress.on('uncaught:exception', (err, runnable) => {
-    console.error('Uncaught exception', err);
+  Cypress.on("uncaught:exception", (err, runnable) => {
+    console.error("Uncaught exception", err);
     return false;
   });
 });
@@ -45,7 +46,7 @@ describe("Acceder a la funcionalidad Pages: Crear nueva pagina", () => {
 // **************************************** END TESTING PAGE ************************************************
 // ************************************************************************************************************
 
-function login(){
+function login() {
   cy.visit("/#/signin");
   cy.fixture("login.env.json").then((login) => {
     cy.get("#ember6").type(login.userName);
