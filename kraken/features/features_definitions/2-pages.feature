@@ -14,13 +14,9 @@ Scenario: Create a page correctly
   When I click "new-page"
   And I wait for 1 seconds
   And I click "page-title"
-  And I wait for 1 seconds
   And I enter text "Mi primera página" at "page-title"
-  And I wait for 1 seconds
   And I click "page-body"
-  And I wait for 1 seconds
   And I enter text "Esta es mi primera página" at "page-body"
-  And I wait for 1 seconds
   And I click "publish"
   And I wait for 1 seconds
   And I click "final-review"
@@ -60,10 +56,10 @@ Scenario: Delete a page created
   And I wait for 1 seconds
   And I click "edit-info-page"
   And I click "delete-page"
-  And I click "delete-confirm"
+  And I click "delete-page-confirm"
   Then I navigate to page "<URL_PAGES"
   And I wait for 1 seconds
-  And I did not find the page "Página a borrar"
+  And I find if the page "Página a borrar" do not exist
 
 @user3 @web
 Scenario: Create a page with a title over the characters limit (255)
