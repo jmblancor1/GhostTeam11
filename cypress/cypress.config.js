@@ -13,7 +13,7 @@ module.exports = defineConfig({
     viewportHeight: 800,
 
     // baseUrl: "https://ghost-v5-8wq2.onrender.com/ghost",
-    baseUrl1: "https://ghost-3.onrender.com/ghost",
+    baseUrl: "https://ghost-3.onrender.com/ghost",
 
 
     setupNodeEvents(on, config) {
