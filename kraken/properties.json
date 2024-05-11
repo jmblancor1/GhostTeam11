@@ -5,5 +5,8 @@
     "USERNAME": "df.guerrerov1@uniandes.edu.co",
     "PASSWORD": "qwerty1234",
     "URL_MEMBERS": "https://ghost-v5-8wq2.onrender.com/ghost/#/members",
-    "URL_TAGS": "https://ghost-v5-8wq2.onrender.com/ghost/#/tags"
+    "URL_TAGS": "https://ghost-v5-8wq2.onrender.com/ghost/#/tags",
+    "URL_SIGN_IN_V3": "https://ghost-3.onrender.com/ghost/#/signin",
+    "URL_DASHBOARD_V3": "https://ghost-3.onrender.com/ghost/#/site",
+    "URL_MEMBERS_V3": "https://ghost-3.onrender.com/ghost/#/members"
 }
