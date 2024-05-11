@@ -1,9 +1,13 @@
 require('cypress-xpath');
 describe('Create Post draft in Ghost', () => {
- 
+/*"userName": "df.guerrerov1@uniandes.edu.co",
+  "password": "qwerty1234"*/    
     const versionFolder = Cypress.config('baseFolder568');  
     const caseFolder = `${versionFolder}caso11`;  
- 
+
+
+
+    
     beforeEach(() => {
         login();
         Cypress.on('uncaught:exception', (err, runnable) => {
