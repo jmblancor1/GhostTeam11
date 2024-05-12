@@ -1,0 +1,168 @@
+{
+  "testSuite": "BackstopJS",
+  "tests": [
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_Creacin_Draft_Post_0_document_0_desktop.png",
+        "test": "..\\bitmaps_test\\20240512-122226\\backstop_default_Creacin_Draft_Post_0_document_0_desktop.png",
+        "selector": "document",
+        "fileName": "backstop_default_Creacin_Draft_Post_0_document_0_desktop.png",
+        "label": "Creación Draft Post",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "https://github.com/jmblancor1/GhostTeam11/blob/1e36e5a901cad16327a99f6da00fdebd995f0a32/VRTBackstop/screenshots/v3.42/caso11/1-creating-post.png?raw=true",
+        "referenceUrl": "https://raw.githubusercontent.com/jmblancor1/GhostTeam11/develop/VRTBackstop/screenshots/v5.68/caso11/1-creating-draft.png",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 2.162181712962963,
+          "misMatchPercentage": "2.16",
+          "analysisTime": 285
+        },
+        "diffImage": "..\\bitmaps_test\\20240512-122226\\failed_diff_backstop_default_Creacin_Draft_Post_0_document_0_desktop.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_Post_Draft_List_0_document_0_desktop.png",
+        "test": "..\\bitmaps_test\\20240512-122226\\backstop_default_Post_Draft_List_0_document_0_desktop.png",
+        "selector": "document",
+        "fileName": "backstop_default_Post_Draft_List_0_document_0_desktop.png",
+        "label": "Post Draft List",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "https://raw.githubusercontent.com/jmblancor1/GhostTeam11/develop/VRTBackstop/screenshots/v3.42/caso11/6-ValidationPostDrafted.png",
+        "referenceUrl": "https://raw.githubusercontent.com/jmblancor1/GhostTeam11/develop/VRTBackstop/screenshots/v5.68/caso11/7-editing-draft-ValidationItemEdited.png.png",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 7.863184799382717,
+          "misMatchPercentage": "7.86",
+          "analysisTime": 378
+        },
+        "diffImage": "..\\bitmaps_test\\20240512-122226\\failed_diff_backstop_default_Post_Draft_List_0_document_0_desktop.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_Validation_Post_Edited_0_document_0_desktop.png",
+        "test": "..\\bitmaps_test\\20240512-122226\\backstop_default_Validation_Post_Edited_0_document_0_desktop.png",
+        "selector": "document",
+        "fileName": "backstop_default_Validation_Post_Edited_0_document_0_desktop.png",
+        "label": "Validation Post Edited",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "https://raw.githubusercontent.com/jmblancor1/GhostTeam11/develop/VRTBackstop/screenshots/v3.42/caso11/7-ValidationPostEdited.png",
+        "referenceUrl": "https://raw.githubusercontent.com/jmblancor1/GhostTeam11/develop/VRTBackstop/screenshots/v5.68/caso11/4-ValidationItemForEditing.png",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 3.329812885802469,
+          "misMatchPercentage": "3.33",
+          "analysisTime": 301
+        },
+        "diffImage": "..\\bitmaps_test\\20240512-122226\\failed_diff_backstop_default_Validation_Post_Edited_0_document_0_desktop.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_Change_Name_Post_0_document_0_desktop.png",
+        "test": "..\\bitmaps_test\\20240512-122226\\backstop_default_Change_Name_Post_0_document_0_desktop.png",
+        "selector": "document",
+        "fileName": "backstop_default_Change_Name_Post_0_document_0_desktop.png",
+        "label": "Change Name Post",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "https://raw.githubusercontent.com/jmblancor1/GhostTeam11/develop/VRTBackstop/screenshots/v3.42/caso11/8-changingPostValues.png",
+        "referenceUrl": "https://raw.githubusercontent.com/jmblancor1/GhostTeam11/develop/VRTBackstop/screenshots/v5.68/caso11/5-editing-draft-tittle.png.png",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 3.651909722222222,
+          "misMatchPercentage": "3.65",
+          "analysisTime": 304
+        },
+        "diffImage": "..\\bitmaps_test\\20240512-122226\\failed_diff_backstop_default_Change_Name_Post_0_document_0_desktop.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_Validation_Post_Published_0_document_0_desktop.png",
+        "test": "..\\bitmaps_test\\20240512-122226\\backstop_default_Validation_Post_Published_0_document_0_desktop.png",
+        "selector": "document",
+        "fileName": "backstop_default_Validation_Post_Published_0_document_0_desktop.png",
+        "label": "Validation Post Published",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "https://raw.githubusercontent.com/jmblancor1/GhostTeam11/develop/VRTBackstop/screenshots/v3.42/caso15/5-ValidationpostPublished.png",
+        "referenceUrl": "https://github.com/jmblancor1/GhostTeam11/blob/develop/VRTBackstop/screenshots/v5.68/caso15/6-ValidationItemPublished.png",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": false,
+          "dimensionDifference": {
+            "width": 0,
+            "height": -183
+          },
+          "rawMisMatchPercentage": 59.263946621799946,
+          "misMatchPercentage": "59.26",
+          "analysisTime": 593
+        },
+        "diffImage": "..\\bitmaps_test\\20240512-122226\\failed_diff_backstop_default_Validation_Post_Published_0_document_0_desktop.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_New_Tag_0_document_0_desktop.png",
+        "test": "..\\bitmaps_test\\20240512-122226\\backstop_default_New_Tag_0_document_0_desktop.png",
+        "selector": "document",
+        "fileName": "backstop_default_New_Tag_0_document_0_desktop.png",
+        "label": "New Tag",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "https://raw.githubusercontent.com/jmblancor1/GhostTeam11/develop/VRTBackstop/screenshots/v3.42/caso19/2-new-tag.png",
+        "referenceUrl": "https://raw.githubusercontent.com/jmblancor1/GhostTeam11/develop/VRTBackstop/screenshots/v5.68/caso19/2-new-tag.png",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 8.918740354938272,
+          "misMatchPercentage": "8.92",
+          "analysisTime": 354
+        },
+        "diffImage": "..\\bitmaps_test\\20240512-122226\\failed_diff_backstop_default_New_Tag_0_document_0_desktop.png"
+      },
+      "status": "fail"
+    }
+  ],
+  "id": "backstop_default"
+}
