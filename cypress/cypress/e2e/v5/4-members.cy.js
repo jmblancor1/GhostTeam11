@@ -96,7 +96,7 @@ describe("Login y escenarios para members", () => {
         cy.screenshot('/v5/caso17/12-delete-member');
     });
 
-    it.only("Debería crear un miembro exitosamente y luego filtrar eventos en la actividad del miembro", () => {
+    it("Debería crear un miembro exitosamente y luego filtrar eventos en la actividad del miembro", () => {
         const email = `test${Math.floor(Math.random() * 100000)}@gmail.com`;
         cy.visit("/#/members");
         cy.screenshot('/v5/caso18/1-visit-members');
