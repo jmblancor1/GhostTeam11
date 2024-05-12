@@ -11,28 +11,22 @@
   "onReadyScript": "puppet/onReady.js",
   "scenarios": [
     {
-      "label": "Comparación de Sign-in (v3 vs v5)",
-      "cookiePath": "backstop_data/engine_scripts/cookies.json",
-      "url": "",
-      "referenceUrl": "",
+      "label": "Prueba imagen",
+      "url": "./backstop_data/screenshots/v3.42/caso11/1-creating-post.png",
+      "referenceUrl": "https://github.com/jmblancor1/GhostTeam11/blob/develop/1-creating-draft.png",
+      "readyEvent": "",
+      "readySelector": "",
+      "delay": 0,
       "hideSelectors": [],
       "removeSelectors": [],
-      "selectors": ["document"],
-      "readyEvent": null,
-      "delay": 500,
-      "misMatchThreshold": 0.1,
-      "children": [
-        {
-          "label": "Sign-in v3",
-          "url": "https://ghost-3.onrender.com/ghost/#/signin",
-          "referenceUrl": "https://ghost-v5-8wq2.onrender.com/ghost/#/signin"
-        },
-        {
-          "label": "Sign-in v5",
-          "url": "https://ghost-3.onrender.com/ghost/#/signin",
-          "referenceUrl": "https://ghost-v5-8wq2.onrender.com/ghost/#/signin"
-        }
-      ]
+      "hoverSelector": "",
+      "clickSelector": "",
+      "postInteractionWait": 1,
+      "selectors": [],
+      "selectorExpansion": true,
+      "expect": 0,
+      "misMatchThreshold" : 0.1,
+      "requireSameDimensions": true
     }
   ],
   "paths": {
