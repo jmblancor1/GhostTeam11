@@ -1,0 +1,54 @@
+{
+  "id": "backstop_default",
+  "viewports": [
+    {
+      "name": "desktop",
+      "width": 1920,
+      "height": 1080
+    }
+  ],
+  "onBeforeScript": "puppet/onBefore.js",
+  "onReadyScript": "puppet/onReady.js",
+  "scenarios": [
+    {
+      "label": "Comparación de Sign-in (v3 vs v5)",
+      "cookiePath": "backstop_data/engine_scripts/cookies.json",
+      "url": "",
+      "referenceUrl": "",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": ["document"],
+      "readyEvent": null,
+      "delay": 500,
+      "misMatchThreshold": 0.1,
+      "children": [
+        {
+          "label": "Sign-in v3",
+          "url": "https://ghost-3.onrender.com/ghost/#/signin",
+          "referenceUrl": "https://ghost-v5-8wq2.onrender.com/ghost/#/signin"
+        },
+        {
+          "label": "Sign-in v5",
+          "url": "https://ghost-3.onrender.com/ghost/#/signin",
+          "referenceUrl": "https://ghost-v5-8wq2.onrender.com/ghost/#/signin"
+        }
+      ]
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "engine_scripts": "backstop_data/engine_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "report": ["browser"],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args": ["--no-sandbox"]
+  },
+  "asyncCaptureLimit": 5,
+  "asyncCompareLimit": 50,
+  "debug": false,
+  "debugWindow": false
+}

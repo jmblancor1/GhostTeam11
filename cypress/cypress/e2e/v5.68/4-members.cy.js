@@ -92,11 +92,12 @@ describe("Login y escenarios para members", () => {
       cy.screenshot('/v5.68/caso17/11-modal-be-visible');
       cy.wait(3000);
       cy.get('.modal-footer').find('button').contains('Delete member').click();
+      cy.screenshot('/v5.68/caso17/12-delete-member-confirm');
       cy.wait(5000);
-      cy.screenshot('/v5.68/caso17/12-delete-member');
+      cy.screenshot('/v5.68/caso17/13-delete-member');
   });
 
-  it.only("Debería crear un miembro exitosamente y luego filtrar eventos en la actividad del miembro", () => {
+  it("Debería crear un miembro exitosamente y luego filtrar eventos en la actividad del miembro", () => {
       const email = `test${Math.floor(Math.random() * 100000)}@gmail.com`;
       cy.visit("/#/members");
       cy.screenshot('/v5.68/caso18/1-visit-members');
