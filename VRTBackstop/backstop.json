@@ -225,6 +225,24 @@
       "expect": 0,
       "misMatchThreshold" : 0.1,
       "requireSameDimensions": true
+    },
+    {
+      "label": "Tags: Delete Tag Modal",
+      "url": "https://raw.githubusercontent.com/jmblancor1/GhostTeam11/develop/VRTBackstop/screenshots/v3.42/caso20/10-click-delete-tag.png",
+      "referenceUrl": "https://raw.githubusercontent.com/jmblancor1/GhostTeam11/develop/VRTBackstop/screenshots/v5.68/caso20/10-click-delete-tag.png",
+      "readyEvent": "",
+      "readySelector": "",
+      "delay": 0,
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "hoverSelector": "",
+      "clickSelector": "",
+      "postInteractionWait": 1,
+      "selectors": [],
+      "selectorExpansion": true,
+      "expect": 0,
+      "misMatchThreshold" : 0.1,
+      "requireSameDimensions": true
     }
   ],
   "paths": {
