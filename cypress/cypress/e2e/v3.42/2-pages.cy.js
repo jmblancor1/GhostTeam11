@@ -1,4 +1,4 @@
-//**************************************** Test para v5.14.1 de ghost ****************************************/
+//**************************************** Test para v3.42.9 de ghost ****************************************/
 
 require("cypress-xpath");
 
@@ -15,9 +15,7 @@ beforeEach(() => {
 // **************************************** START TESTING PAGE ************************************************
 // ************************************************************************************************************
 
-
 describe("Acceder a la funcionalidad Pages", () => {
-
   // **************************************** NEW PAGE ************************************************
 
   it("Crear una nueva página con campos completos", () => {
@@ -44,11 +42,9 @@ describe("Acceder a la funcionalidad Pages", () => {
     cy.wait(2000);
   });
 
-
-
   // **************************************** NEW PAGE WITH TITLE ************************************************
 
-  it.only("Crear una página con título superior a 255 caracteres", () => {
+  it("Crear una página con título superior a 255 caracteres", () => {
     cy.visit("/#/pages");
     //click boton Pagina
     cy.get("a").contains("Pages").click();
@@ -75,8 +71,10 @@ describe("Acceder a la funcionalidad Pages", () => {
     //Eliminar draft
     cy.visit("/#/pages");
     cy.get("span").contains("Leave").click();
-    cy.xpath("/html/body/div[2]/div/main/section/section/ol/li[2]/a[2]").click();
-    cy.get("button.post-settings")
+    cy.xpath(
+      "/html/body/div[2]/div/main/section/section/ol/li[2]/a[2]"
+    ).click();
+    cy.get("button.post-settings");
     cy.xpath(
       "/html/body/div[4]/div[1]/div/div/div/div/div[1]/div/div[1]/div[2]/form/button/span"
     ).click();
@@ -85,23 +83,19 @@ describe("Acceder a la funcionalidad Pages", () => {
     // cy.visit("/#/pages");
   });
 
-
-
   // **************************************** DELETE PAGE ************************************************
 
   it("Eliminar una página creada", () => {
     cy.visit("/#/pages");
     cy.xpath("/html/body/div[2]/div/main/section/section/ol/li[2]").click();
-    cy.xpath("/html/body/div[2]/div/main/section/header/section/button").click();
+    cy.xpath(
+      "/html/body/div[2]/div/main/section/header/section/button"
+    ).click();
     cy.xpath(
       "/html/body/div[4]/div[1]/div/div/div/div/div[1]/div/div[1]/div[2]/form/button"
     ).click();
-    cy.xpath(
-      "/html/body/div[2]/div/main/div/div/div/div/div[2]/form/button"
-      ).click();
     cy.get("h1").should("contain", "Are you sure you want to delete this ");
-    cy.get("span").contains("Delete").click();
-    cy.wait(2000);
+    cy.get("button.gh-btn-red > span").contains("Delete").click();
   });
 });
 
