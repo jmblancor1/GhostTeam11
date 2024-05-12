@@ -1,9 +1,10 @@
-beforeEach(() => {
+//**************************************** Test para v3.42.9 de ghost ****************************************/
 
+beforeEach(() => {
   login();
 
-  Cypress.on('uncaught:exception', (err, runnable) => {
-    console.error('Uncaught exception', err);
+  Cypress.on("uncaught:exception", (err, runnable) => {
+    console.error("Uncaught exception", err);
     return false;
   });
 });
@@ -19,7 +20,7 @@ describe("Login y acceder a las configuraciones de ghost: Metadatos ", () => {
     cy.get("a").contains("General").click();
     cy.xpath(
       "/html/body/div[2]/div/main/section/div/section/div[6]/div[1]/div[1]/div[2]/button/span"
-     ).click();
+    ).click();
     cy.get('input[type="text"]')
       .eq(0)
       .invoke("val", "")
@@ -61,10 +62,10 @@ describe("Login y acceder a las configuraciones de ghost: Metadatos ", () => {
   });
 
   it("Vincular cuentas redes sociales con datos incorrectos", () => {
-     cy.get("a").contains("General").click();
-     cy.xpath(
-       "/html/body/div[2]/div/main/section/div/section/div[8]/div/div[2]/button/span"
-     ).click();
+    cy.get("a").contains("General").click();
+    cy.xpath(
+      "/html/body/div[2]/div/main/section/div/section/div[8]/div/div[2]/button/span"
+    ).click();
     cy.get('input[type="url"]').eq(0).invoke("val", "").type("https://www.");
 
     cy.get('input[type="url"]')
@@ -91,10 +92,10 @@ describe("Login y acceder a las configuraciones de ghost: Metadatos ", () => {
   });
 
   it("Vincular cuentas redes sociales con datos correctos", () => {
-     cy.get("a").contains("General").click();
-     cy.xpath(
-       "/html/body/div[2]/div/main/section/div/section/div[8]/div/div[2]/button/span"
-     ).click();
+    cy.get("a").contains("General").click();
+    cy.xpath(
+      "/html/body/div[2]/div/main/section/div/section/div[8]/div/div[2]/button/span"
+    ).click();
     cy.get('input[type="url"]')
       .eq(0)
       .invoke("val", "")
@@ -110,13 +111,11 @@ describe("Login y acceder a las configuraciones de ghost: Metadatos ", () => {
   });
 });
 
-
-
 // ************************************************************************************************************
 // **************************************** FIN TEST SETTING ************************************************
 // ************************************************************************************************************
 
-function login(){
+function login() {
   cy.visit("/#/signin");
   cy.fixture("login.env.json").then((login) => {
     cy.get("#ember8").type(login.userName);
