@@ -176,6 +176,26 @@
           "label": "Pages: Delete Confirm",
           "after": "v3.42/caso08/4-accessSection2.png",
           "before": "v5.14/caso08/5-deletemessage.png"
+      },
+      {
+        "label": "Settings: Type Meta Title",
+        "after": "v3.42/caso02/2-settings-metadatos-01.png",
+        "before": "v5.14/caso02/2-setting-01.png"
+      },
+      {
+        "label": "Settings: Type Twitter Title",
+        "after": "v3.42/caso02/2-settings-metadatos-02.png",
+        "before": "v5.14/caso02/2-setting-02.png"
+      },
+      {
+        "label": "Settings: Facebook configuration",
+        "after": "v3.42/caso02/2-settings-metadatos-03.png",
+        "before": "v5.14/caso02/2-setting-03.png"
+      },
+      {
+        "label": "Settings: Social Media configuration",
+        "after": "v3.42/caso02/2-settings-metadatos-04.png",
+        "before": "v5.14/caso02/2-setting-04.png"
       }
     ],
     "viewportHeight":600, 
