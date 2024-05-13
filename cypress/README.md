@@ -35,6 +35,8 @@ A continuación se detallan los pasos para realizar la correcta ejecución de la
     
     `cypress open`.
 
+    Nota: Las pruebas están configuradas para correr en la versión 5 (e2e/v5.68) en: https://ghost-v5-8wq2.onrender.com/ghost, si desea correr la versión 3 dirijase al archivo cypress.config en la ruta de cypress en su computador y reemplace el baseUrl por https://ghost-3.onrender.com/ghost y busque en cypress dicha carpeta denominada e2e/v3.42
+
 9. Se debe abrir una instancia de Cypress para configurar las pruebas a ejecutar.
 
 ![cypress paso 7](assets/1.png)

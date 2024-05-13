@@ -1,5 +1,6 @@
 const { Given, When, Then } = require('@cucumber/cucumber');
-
+var fs = require('fs');
+var path = require('path');
 /* INICIO LISTADO DE STEPS GENERALES */
 
 When('I enter email {kraken-string}', async function (email) {
@@ -22,6 +23,21 @@ When(/^I click on the link with text "([^"]*)"$/, async function (linkText) {
     const link = await this.driver.$(`//*[contains(text(), "${linkText}")]`);
     await link.click();
 });
+When(/^I take a screenshot in (\w+)$/, function(functionality, callback) {
+    var timestamp = Date.now();
+    var currentDir = process.cwd();
+    var krakenDir = path.join(currentDir, 'kraken');
+    var relativePath = path.join(krakenDir, '..', 'screenshots', functionality, 'screenshot_' + timestamp + '.png'); 
+    var dir = path.join(krakenDir, '..', 'screenshots', functionality);
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
+    }
+  
+    this.driver.takeScreenshot().then(function(data){
+      fs.writeFileSync(relativePath, data, 'base64');
+      callback();
+    });
+})
 /* FIN LISTADO DE STEPS DE STEPS GENERALES */
 
 
@@ -495,4 +511,18 @@ When('I reload the page', async function () {
 
 /* FIN LISTADO DE STEPS PARA FUNCIONALIDAD DE MEMBERS */
 
+/* INICIO LISTADO DE STEPS PARA FUNCIONALIDADES V3 */
+When('I enter email V3 {kraken-string}', async function (email) {
+    let element = await this.driver.$('#ember8');
+    return await element.setValue(email);
+});
+When('I enter password V3 {kraken-string}', async function (password) {
+    let element = await this.driver.$('#ember10');
+    return await element.setValue(password);
+});
+When('I click next V3', async function() {
+    let element = await this.driver.$('#ember12');
+    return await element.click();
+})
+/* FIN LISTADO DE STEPS PARA FUNCIONALIDADES V3 */
 module.exports = { generateRandomEmail };
