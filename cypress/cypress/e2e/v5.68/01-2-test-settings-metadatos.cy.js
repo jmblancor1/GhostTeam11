@@ -1,9 +1,10 @@
-beforeEach(() => {
+//**************************************** Test para v5.14.1 de ghost ****************************************/
 
+beforeEach(() => {
   login();
 
-  Cypress.on('uncaught:exception', (err, runnable) => {
-    console.error('Uncaught exception', err);
+  Cypress.on("uncaught:exception", (err, runnable) => {
+    console.error("Uncaught exception", err);
     return false;
   });
 });
@@ -23,10 +24,11 @@ describe("Login y acceder a las configuraciones de ghost: Metadatos ", () => {
       ":nth-child(2) > .gh-expandable > :nth-child(1) > .gh-expandable-header > .gh-btn > span"
     ).click();
     cy.get('input[type="text"]')
-      .eq(0)
-      .invoke("val", "")
-      .type("Grupo # 11 - Pruebas automatizadas de software")
-      .should("have.value", "Grupo # 11 - Pruebas automatizadas de software");
+    .eq(0)
+    .invoke("val", "")
+    .type("Grupo # 11 - Pruebas automatizadas de software")
+    .should("have.value", "Grupo # 11 - Pruebas automatizadas de software");
+    cy.screenshot("/v5.14/caso02/2-setting-01");
     cy.wait(3000);
     cy.get("span").contains("Save").click();
     cy.get(
@@ -47,6 +49,7 @@ describe("Login y acceder a las configuraciones de ghost: Metadatos ", () => {
       .invoke("val", "")
       .type("MISW-4103 - 2024-12")
       .should("have.value", "MISW-4103 - 2024-12");
+    cy.screenshot("/v5.14/caso02/2-setting-02");
     cy.wait(3000);
     cy.get("span").contains("Save").click();
     cy.get(
@@ -67,6 +70,7 @@ describe("Login y acceder a las configuraciones de ghost: Metadatos ", () => {
       .invoke("val", "")
       .type("MISW-4103 - 2024-12")
       .should("have.value", "MISW-4103 - 2024-12");
+    cy.screenshot("/v5.14/caso02/2-setting-03");
     cy.wait(3000);
     cy.get("span").contains("Save").click();
     cy.get(
@@ -124,6 +128,7 @@ describe("Login y acceder a las configuraciones de ghost: Metadatos ", () => {
       .invoke("val", "")
       .type("https://twitter.com/grupo_11")
       .should("have.value", "https://twitter.com/grupo_11");
+    cy.screenshot("/v5.14/caso02/2-setting-04");
     cy.wait(3000);
     cy.get("span").contains("Save").click();
     cy.get(
@@ -133,13 +138,11 @@ describe("Login y acceder a las configuraciones de ghost: Metadatos ", () => {
   });
 });
 
-
-
 // ************************************************************************************************************
 // **************************************** FIN TEST SETTING ************************************************
 // ************************************************************************************************************
 
-function login(){
+function login() {
   cy.visit("/#/signin");
   cy.fixture("login.env.json").then((login) => {
     cy.get("#ember6").type(login.userName);

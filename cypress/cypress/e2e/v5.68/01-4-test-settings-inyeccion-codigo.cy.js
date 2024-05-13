@@ -1,9 +1,10 @@
-beforeEach(() => {
+//**************************************** Test para v5.14.1 de ghost ****************************************/
 
+beforeEach(() => {
   login();
 
-  Cypress.on('uncaught:exception', (err, runnable) => {
-    console.error('Uncaught exception', err);
+  Cypress.on("uncaught:exception", (err, runnable) => {
+    console.error("Uncaught exception", err);
     return false;
   });
 });
@@ -20,23 +21,26 @@ describe("Login y acceder a las configuraciones de ghost: Añadir código a una 
     cy.get("#ember32").click();
     cy.get("h4").contains("Code injection").click();
 
-    cy.get('#ghost-head > .CodeMirror > .CodeMirror-scroll')
+    cy.get("#ghost-head > .CodeMirror > .CodeMirror-scroll")
     .click()
     .type("{ctrl+A}{del}")
     .type("Universidad de Los Andes - Ghost");
     cy.get("span").contains("Save").click();
+    // cy.screenshot("/v5.14/caso04/4-setting-01");
     cy.get("span").should("contain", "Saved");
     cy.get("#ember23").click();
-    cy.wait(3000)
+    cy.wait(3000);
   });
 
   it("Añadir un pie de página a un sitio web", () => {
     cy.visit("/#/settings/code-injection");
     cy.get("#ember32").click();
     cy.get("h4").contains("Code injection").click();
-    cy.get('#ghost-foot > .CodeMirror > .CodeMirror-scroll').click()
-    .type("{ctrl+A}{del}")
-    .type("Colombia - 2024");
+    cy.get("#ghost-foot > .CodeMirror > .CodeMirror-scroll")
+      .click()
+      .type("{ctrl+A}{del}")
+      .type("Colombia - 2024");
+    // cy.screenshot("/v5.14/caso04/4-setting-02");
     cy.get("span").contains("Save").click();
     cy.get("span").should("contain", "Saved");
     cy.wait(2000);
@@ -48,7 +52,7 @@ describe("Login y acceder a las configuraciones de ghost: Añadir código a una 
 // **************************************** FIN TEST SETTING ************************************************
 // ************************************************************************************************************
 
-function login(){
+function login() {
   cy.visit("/#/signin");
   cy.fixture("login.env.json").then((login) => {
     cy.get("#ember6").type(login.userName);

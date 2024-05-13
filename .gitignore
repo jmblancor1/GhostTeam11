@@ -11,3 +11,5 @@ results/
 reports/
 kraken/reports/
 kraken/screenshots/
+
+cypress/downloads

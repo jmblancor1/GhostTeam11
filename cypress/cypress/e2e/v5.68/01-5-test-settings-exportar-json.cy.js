@@ -1,9 +1,10 @@
-beforeEach(() => {
+//**************************************** Test para v5.14.1 de ghost ****************************************/
 
+beforeEach(() => {
   login();
 
-  Cypress.on('uncaught:exception', (err, runnable) => {
-    console.error('Uncaught exception', err);
+  Cypress.on("uncaught:exception", (err, runnable) => {
+    console.error("Uncaught exception", err);
     return false;
   });
 });
@@ -19,20 +20,19 @@ describe("Login y acceder a las configuraciones de ghost: Laboratorio", () => {
     cy.visit("/#/settings/labs");
     cy.get("#ember32").click();
     cy.get("h4").contains("Labs").click();
+    cy.get("span").contains("Export").click();
+    // cy.screenshot("/v5.14/caso05/5-setting-01");
 
-    cy.get("span").contains("Export").click()
-
-      cy.wait(3000);
+    cy.wait(3000);
     cy.get("#ember23").click();
   });
-
 });
 
 // ************************************************************************************************************
 // **************************************** FIN TEST SETTING ************************************************
 // ************************************************************************************************************
 
-function login(){
+function login() {
   cy.visit("/#/signin");
   cy.fixture("login.env.json").then((login) => {
     cy.get("#ember6").type(login.userName);

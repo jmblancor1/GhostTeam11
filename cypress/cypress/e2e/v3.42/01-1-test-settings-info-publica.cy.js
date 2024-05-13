@@ -1,4 +1,5 @@
 //**************************************** Test para v3.42.9 de ghost ****************************************/
+require("cypress-xpath");
 
 beforeEach(() => {
   login();
@@ -18,9 +19,11 @@ beforeEach(() => {
 describe("Login y acceder a las configuraciones de ghost: Información de publicación", () => {
   it("Asignar un título a una publicación web", () => {
     cy.get("a").contains("General").click();
+    cy.screenshot("/v3.42/caso-01/1-settings-01");
     cy.xpath(
       "/html/body/div[2]/div/main/section/div/section/div[2]/div[1]/div[2]/button/span"
     ).click();
+    cy.screenshot("/v3.42/caso-01/1-settings-02");
     cy.get('input[type="text"]')
       .eq(0)
       .invoke("val", "")

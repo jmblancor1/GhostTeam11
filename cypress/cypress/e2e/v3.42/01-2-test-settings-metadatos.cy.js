@@ -1,5 +1,7 @@
 //**************************************** Test para v3.42.9 de ghost ****************************************/
 
+require("cypress-xpath");
+
 beforeEach(() => {
   login();
 
@@ -21,6 +23,7 @@ describe("Login y acceder a las configuraciones de ghost: Metadatos ", () => {
     cy.xpath(
       "/html/body/div[2]/div/main/section/div/section/div[6]/div[1]/div[1]/div[2]/button/span"
     ).click();
+    cy.screenshot("/v3.42/caso-02/2-settings-metadatos-01");
     cy.get('input[type="text"]')
       .eq(0)
       .invoke("val", "")
@@ -36,6 +39,7 @@ describe("Login y acceder a las configuraciones de ghost: Metadatos ", () => {
     cy.xpath(
       "/html/body/div[2]/div/main/section/div/section/div[6]/div[2]/div[1]/div[2]/button/span"
     ).click();
+    cy.screenshot("/v3.42/caso-02/2-settings-metadatos-02");
     cy.get('input[type="text"]')
       .eq(0)
       .invoke("val", "")
@@ -51,6 +55,7 @@ describe("Login y acceder a las configuraciones de ghost: Metadatos ", () => {
     cy.xpath(
       "/html/body/div[2]/div/main/section/div/section/div[6]/div[3]/div[1]/div[2]/button/span"
     ).click();
+    cy.screenshot("/v3.42/caso-02/2-settings-metadatos-03");
     cy.get('input[type="text"]')
       .eq(0)
       .invoke("val", "")
@@ -106,6 +111,7 @@ describe("Login y acceder a las configuraciones de ghost: Metadatos ", () => {
       .invoke("val", "")
       .type("https://twitter.com/grupo_11")
       .should("have.value", "https://twitter.com/grupo_11");
+    cy.screenshot("/v3.42/caso-02/2-settings-metadatos-04");
     cy.wait(3000);
     cy.get("span").contains("Save settings").click();
   });
