@@ -1,4 +1,4 @@
-# Ejecutar pruebas de regresión con Backstop
+# Ejecutar pruebas de regresión con Resemble
 
 ## Versiones usadas
 
@@ -35,6 +35,6 @@ A continuación se detallan los pasos para realizar la correcta ejecución de la
 
 7. Al terminar la ejecución se generarán las comparaciones de Ghost. 
 
-    - En la carpeta resulta/fecha-de-ejecución podrá encontrar:
-        - Las imágenes del resultado de cada comparación así: compare-feature
+    - En la carpeta results/fecha-de-ejecución podrá encontrar:
+        - Las imágenes del resultado de cada comparación así: compare-funcionalidad-ejecutada
         - El reporte con los resultados: report.html
