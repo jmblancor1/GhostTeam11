@@ -17,111 +17,166 @@
         "ignore": "antialiasing"
     },
     "scenarios": [
-        {
-          "label": "Posts: Creacion Draft Post",
-          "after": "v3.42/caso11/1-creating-post.png",
-          "before": "v5.14/caso11/1-creating-draft.png"
-        },
-        {
-            "label": "Posts: Post Draft List",
-            "after": "v3.42/caso11/6-ValidationPostDrafted.png",
-            "before": "v5.14/caso11/7-editing-draft-ValidationItemEdited.png.png"
-        },
-        {
-            "label": "Posts: Change Name Post",
-            "after": "v3.42/caso11/8-changingPostValues.png",
-            "before": "v5.14/caso11/5-editing-draft-tittle.png.png"
-        },
-        {
-            "label": "Posts: Change Name Post",
-            "after": "v3.42/caso11/8-changingPostValues.png",
-            "before": "v5.14/caso11/5-editing-draft-tittle.png.png"
-        },
-        {
-            "label": "Posts: Validation Post Published",
-            "after": "v3.42/caso15/5-ValidationpostPublished.png",
-            "before": "v5.14/caso15/6-ValidationItemPublished.png"
-        },
-        {
-            "label": "Tags: New Tag",
-            "after": "v3.42/caso19/2-new-tag.png",
-            "before": "v5.14/caso19/2-new-tag.png"
-        },
-        {
-            "label": "Tags: Type Tag Name",
-            "after": "v3.42/caso19/3-type-tag-name.png",
-            "before": "v5.14/caso19/3-type-tag-name.png"
-        },
-        {
-            "label": "Tags: Type Accent Color",
-            "after": "v3.42/caso19/4-type-accent-color.png",
-            "before": "v5.14/caso19/4-type-accent-color.png"
-        },
-        {
-            "label": "Tags: Type Tag Slug",
-            "after": "v3.42/caso19/5-type-tag-slug.png",
-            "before": "v5.14/caso19/5-type-tag-slug.png"
-        },
-        {
-            "label": "Tags: Type Tag Description",
-            "after": "v3.42/caso19/6-type-tag-description.png",
-            "before": "v5.14/caso19/6-type-tag-description.png"
-        },
-        {
-            "label": "Tags: Click Save",
-            "after": "v3.42/caso19/7-click-save.png",
-            "before": "v5.14/caso19/7-click-save.png"
-        },
-        {
-            "label": "Tags: Visit Tags",
-            "after": "v3.42/caso19/8-visit-tags.png",
-            "before": "v5.14/caso19/8-visit-tags.png"
-        },
-        {
-            "label": "Tags: Click Tag Created",
-            "after": "v3.42/caso19/9-click-tag-created.png",
-            "before": "v5.14/caso19/9-click-tag-created.png"
-        },
-        {
-            "label": "Tags: Delete Tag Modal",
-            "after": "v3.42/caso20/10-click-delete-tag.png",
-            "before": "v5.14/caso20/10-click-delete-tag.png"
-        },
-        {
-            "label": "Members: Create Member",
-            "after": "v3.42/caso16/2-new-member.png",
-            "before": "v5.14/caso16/2-new-member.png"
-        },
-        {
-            "label": "Members: Type Member email",
-            "after": "v3.42/caso16/4-type-member-email.png",
-            "before": "v5.14/caso16/4-type-member-email.png"
-        },
-        {
-            "label": "Members: Type Member note",
-            "after": "v3.42/caso16/5-type-member-note.png",
-            "before": "v5.14/caso16/5-type-member-note.png"
-        },
-        {
-            "label": "Members: Click Save",
-            "after": "v3.42/caso16/6-click-save.png",
-            "before": "v5.14/caso16/6-click-save.png"
-        },
-        {
-            "label": "Members: List Members",
-            "after": "v3.42/caso16/7-visit-members.png",
-            "before": "v5.14/caso16/7-visit-members.png"
-        },
-        {
-            "label": "Members: Click member created",
-            "after": "v3.42/caso16/8-click-member-created.png",
-            "before": "v5.14/caso16/8-click-member-created.png"
-        },
-        {
-            "label": "Members: Click delete and modal open",
-            "after": "v3.42/caso17/10-modal-be-visible.png",
-            "before": "v5.14/caso17/11-modal-be-visible.png"
-        }
+      {
+        "label": "Posts: Creacion Draft Post",
+        "after": "v3.42/caso11/1-creating-post.png",
+        "before": "v5.14/caso11/1-creating-draft.png"
+      },
+      {
+          "label": "Posts: Post Draft List",
+          "after": "v3.42/caso11/6-ValidationPostDrafted.png",
+          "before": "v5.14/caso11/7-editing-draft-ValidationItemEdited.png.png"
+      },
+      {
+          "label": "Posts: Change Name Post",
+          "after": "v3.42/caso11/8-changingPostValues.png",
+          "before": "v5.14/caso11/5-editing-draft-tittle.png.png"
+      },
+      {
+          "label": "Posts: Change Name Post",
+          "after": "v3.42/caso11/8-changingPostValues.png",
+          "before": "v5.14/caso11/5-editing-draft-tittle.png.png"
+      },
+      {
+          "label": "Posts: Validation Post Published",
+          "after": "v3.42/caso15/5-ValidationpostPublished.png",
+          "before": "v5.14/caso15/6-ValidationItemPublished.png"
+      },
+      {
+          "label": "Tags: New Tag",
+          "after": "v3.42/caso19/2-new-tag.png",
+          "before": "v5.14/caso19/2-new-tag.png"
+      },
+      {
+          "label": "Tags: Type Tag Name",
+          "after": "v3.42/caso19/3-type-tag-name.png",
+          "before": "v5.14/caso19/3-type-tag-name.png"
+      },
+      {
+          "label": "Tags: Type Accent Color",
+          "after": "v3.42/caso19/4-type-accent-color.png",
+          "before": "v5.14/caso19/4-type-accent-color.png"
+      },
+      {
+          "label": "Tags: Type Tag Slug",
+          "after": "v3.42/caso19/5-type-tag-slug.png",
+          "before": "v5.14/caso19/5-type-tag-slug.png"
+      },
+      {
+          "label": "Tags: Type Tag Description",
+          "after": "v3.42/caso19/6-type-tag-description.png",
+          "before": "v5.14/caso19/6-type-tag-description.png"
+      },
+      {
+          "label": "Tags: Click Save",
+          "after": "v3.42/caso19/7-click-save.png",
+          "before": "v5.14/caso19/7-click-save.png"
+      },
+      {
+          "label": "Tags: Visit Tags",
+          "after": "v3.42/caso19/8-visit-tags.png",
+          "before": "v5.14/caso19/8-visit-tags.png"
+      },
+      {
+          "label": "Tags: Click Tag Created",
+          "after": "v3.42/caso19/9-click-tag-created.png",
+          "before": "v5.14/caso19/9-click-tag-created.png"
+      },
+      {
+          "label": "Tags: Delete Tag Modal",
+          "after": "v3.42/caso20/10-click-delete-tag.png",
+          "before": "v5.14/caso20/10-click-delete-tag.png"
+      },
+      {
+          "label": "Members: Create Member",
+          "after": "v3.42/caso16/2-new-member.png",
+          "before": "v5.14/caso16/2-new-member.png"
+      },
+      {
+          "label": "Members: Type Member email",
+          "after": "v3.42/caso16/4-type-member-email.png",
+          "before": "v5.14/caso16/4-type-member-email.png"
+      },
+      {
+          "label": "Members: Type Member note",
+          "after": "v3.42/caso16/5-type-member-note.png",
+          "before": "v5.14/caso16/5-type-member-note.png"
+      },
+      {
+          "label": "Members: Click Save",
+          "after": "v3.42/caso16/6-click-save.png",
+          "before": "v5.14/caso16/6-click-save.png"
+      },
+      {
+          "label": "Members: List Members",
+          "after": "v3.42/caso16/7-visit-members.png",
+          "before": "v5.14/caso16/7-visit-members.png"
+      },
+      {
+          "label": "Members: Click member created",
+          "after": "v3.42/caso16/8-click-member-created.png",
+          "before": "v5.14/caso16/8-click-member-created.png"
+      },
+      {
+          "label": "Members: Click delete and modal open",
+          "after": "v3.42/caso17/10-modal-be-visible.png",
+          "before": "v5.14/caso17/11-modal-be-visible.png"
+      },
+      {
+          "label": "Pages: List Pages",
+          "after": "v3.42/caso06/1-accessPages.png",
+          "before": "v5.14/caso06/1-accessPages.png"
+      },
+      {
+          "label": "Pages: new Page",
+          "after": "v3.42/caso06/2-accessNewPage.png",
+          "before": "v5.14/caso06/2-accessNewPage.png"
+      },
+      {
+          "label": "Pages: type title Page",
+          "after": "v3.42/caso06/3-accessPagesTittle.png",
+          "before": "v5.14/caso06/3-accessNewPageTittle.png"
+      },
+      {
+          "label": "Pages: type title Page",
+          "after": "v3.42/caso06/3-accessPagesTittle.png",
+          "before": "v5.14/caso06/3-accessNewPageTittle.png"
+      },
+      {
+          "label": "Pages: type decription Page",
+          "after": "v3.42/caso06/4-accessPagesDescription.png",
+          "before": "v5.14/caso06/4-accessNewPageDescription.png"
+      },
+      {
+          "label": "Pages: Publish Page",
+          "after": "v3.42/caso06/5-accessPagesDescription.png",
+          "before": "v5.14/caso06/5-accessNewPagePublish.png"
+      },
+      {
+          "label": "Pages: List pages with elements",
+          "after": "v3.42/caso06/8-listPages.png",
+          "before": "v5.14/caso06/12-listPages.png"
+      },
+      {
+          "label": "Pages: Error Publish",
+          "after": "v3.42/caso07/2-new-pages-with-title-01.png",
+          "before": "v5.14/caso07/7-validationError.png"
+      },
+      {
+          "label": "Pages: Login",
+          "after": "v3.42/caso08/1-accessPages.png",
+          "before": "v5.14/caso08/1-accessPages.png"
+      },
+      {
+          "label": "Pages: Select Delete",
+          "after": "v3.42/caso08/3-accessSection1.png",
+          "before": "v5.14/caso08/3-accessSection1.png"
+      },
+      {
+          "label": "Pages: Delete Confirm",
+          "after": "v3.42/caso08/4-accessSection2.png",
+          "before": "v5.14/caso08/5-deletemessage.png"
+      }
     ],
     "viewportHeight":600, 
     "viewportWidth":800
