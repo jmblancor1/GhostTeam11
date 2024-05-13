@@ -1,3 +1,5 @@
+//**************************************** Test para v3.42.9 de ghost ****************************************/
+
 beforeEach(() => {
 
   login();
@@ -21,6 +23,7 @@ describe("Login y acceder a las configuraciones de ghost: Añadir código a una 
     .click()
     .type("{ctrl+A}{del}")
     .type("Universidad de Los Andes - Ghost");
+    cy.screenshot("/v3.42/caso-04/1-settings-inyeccion-codigo-01");
     cy.get("span").contains("Save").click();
     cy.get("span").should("contain", "Saved");
     cy.wait(3000)
@@ -31,6 +34,7 @@ describe("Login y acceder a las configuraciones de ghost: Añadir código a una 
     cy.get('#ghost-foot > .CodeMirror > .CodeMirror-scroll').click()
     .type("{ctrl+A}{del}")
     .type("Colombia - 2024");
+    cy.screenshot("/v3.42/caso-04/1-settings-inyeccion-codigo-02");
     cy.get("span").contains("Save").click();
     cy.get("span").should("contain", "Saved");
     cy.wait(2000);

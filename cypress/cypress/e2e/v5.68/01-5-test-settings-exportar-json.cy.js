@@ -21,7 +21,7 @@ describe("Login y acceder a las configuraciones de ghost: Laboratorio", () => {
     cy.get("#ember32").click();
     cy.get("h4").contains("Labs").click();
     cy.get("span").contains("Export").click();
-    // cy.screenshot("/v5.14/caso05/5-setting-01");
+    cy.screenshot("/v5.14/caso-05/5-setting-01");
 
     cy.wait(3000);
     cy.get("#ember23").click();

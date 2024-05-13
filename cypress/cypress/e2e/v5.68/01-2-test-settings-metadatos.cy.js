@@ -28,7 +28,7 @@ describe("Login y acceder a las configuraciones de ghost: Metadatos ", () => {
     .invoke("val", "")
     .type("Grupo # 11 - Pruebas automatizadas de software")
     .should("have.value", "Grupo # 11 - Pruebas automatizadas de software");
-    cy.screenshot("/v5.14/caso02/2-setting-01");
+    cy.screenshot("/v5.14/caso-02/2-setting-01");
     cy.wait(3000);
     cy.get("span").contains("Save").click();
     cy.get(
@@ -49,7 +49,7 @@ describe("Login y acceder a las configuraciones de ghost: Metadatos ", () => {
       .invoke("val", "")
       .type("MISW-4103 - 2024-12")
       .should("have.value", "MISW-4103 - 2024-12");
-    cy.screenshot("/v5.14/caso02/2-setting-02");
+    cy.screenshot("/v5.14/caso-02/2-setting-02");
     cy.wait(3000);
     cy.get("span").contains("Save").click();
     cy.get(
@@ -70,7 +70,7 @@ describe("Login y acceder a las configuraciones de ghost: Metadatos ", () => {
       .invoke("val", "")
       .type("MISW-4103 - 2024-12")
       .should("have.value", "MISW-4103 - 2024-12");
-    cy.screenshot("/v5.14/caso02/2-setting-03");
+    cy.screenshot("/v5.14/caso-02/2-setting-03");
     cy.wait(3000);
     cy.get("span").contains("Save").click();
     cy.get(
@@ -128,7 +128,7 @@ describe("Login y acceder a las configuraciones de ghost: Metadatos ", () => {
       .invoke("val", "")
       .type("https://twitter.com/grupo_11")
       .should("have.value", "https://twitter.com/grupo_11");
-    cy.screenshot("/v5.14/caso02/2-setting-04");
+    cy.screenshot("/v5.14/caso-02/2-setting-04");
     cy.wait(3000);
     cy.get("span").contains("Save").click();
     cy.get(

@@ -20,6 +20,7 @@ describe("Login y acceder a las configuraciones de ghost: Personas (Staff)", () 
     cy.get("a").contains("Staff").click();
     cy.get("span").contains("Invite people").click();
     cy.get("#new-user-email").invoke("val", "");
+    cy.screenshot("/v3.42/caso-03/1-settings-staff-01");
     cy.get("span").contains("Send invitation now").click();
     cy.get("p.response").should("contain", "Please enter an email.");
   });
@@ -31,6 +32,7 @@ describe("Login y acceder a las configuraciones de ghost: Personas (Staff)", () 
       .invoke("val", "")
       .type("dafer.guerrero@gmail.com")
       .should("have.value", "dafer.guerrero@gmail.com");
+    cy.screenshot("/v3.42/caso-03/1-settings-staff-02");
     cy.get("span").contains("Send invitation now").click();
     cy.wait(2000);
     cy.get("a.close").click();
@@ -43,6 +45,7 @@ describe("Login y acceder a las configuraciones de ghost: Personas (Staff)", () 
       .invoke("val", "")
       .type("dafer.guerrero@gmail.com")
       .should("have.value", "dafer.guerrero@gmail.com");
+    cy.screenshot("/v3.42/caso-03/1-settings-staff-03");
     cy.get("span").contains("Send invitation now").click();
     cy.get("p.response").should(
       "contain",
@@ -54,6 +57,7 @@ describe("Login y acceder a las configuraciones de ghost: Personas (Staff)", () 
     cy.get("a").contains("Staff").click();
     cy.wait(5000);
     cy.get("a").contains("Revoke").click();
+    cy.screenshot("/v3.42/caso-03/1-settings-staff-04");
     cy.get("span").should("contain", "Invitation revoked");
   });
 });

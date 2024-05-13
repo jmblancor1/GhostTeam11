@@ -26,7 +26,7 @@ describe("Login y acceder a las configuraciones de ghost: Añadir código a una 
     .type("{ctrl+A}{del}")
     .type("Universidad de Los Andes - Ghost");
     cy.get("span").contains("Save").click();
-    // cy.screenshot("/v5.14/caso04/4-setting-01");
+    cy.screenshot("/v5.14/caso-04/4-setting-01");
     cy.get("span").should("contain", "Saved");
     cy.get("#ember23").click();
     cy.wait(3000);
@@ -40,7 +40,7 @@ describe("Login y acceder a las configuraciones de ghost: Añadir código a una 
       .click()
       .type("{ctrl+A}{del}")
       .type("Colombia - 2024");
-    // cy.screenshot("/v5.14/caso04/4-setting-02");
+    cy.screenshot("/v5.14/caso-04/4-setting-02");
     cy.get("span").contains("Save").click();
     cy.get("span").should("contain", "Saved");
     cy.wait(2000);

@@ -19,7 +19,7 @@ describe("Login y acceder a las configuraciones de ghost: Información de public
   it("Asignar un título a una publicación web", () => {
     cy.visit("/#/settings/general");
     cy.get("#ember32").click();
-    cy.screenshot("/v5.14/caso01/1-setting-01");
+    cy.screenshot("/v5.14/caso-01/1-setting-01");
     cy.get("h4").contains("General").click();
     cy.get(
       ":nth-child(1) > .gh-expandable > :nth-child(1) > .gh-expandable-header > .gh-btn > span"
@@ -30,12 +30,12 @@ describe("Login y acceder a las configuraciones de ghost: Información de public
       .type("Grupo # 11")
       .should("have.value", "Grupo # 11");
     cy.wait(3000);
-    cy.screenshot("/v5.14/caso01/1-setting-02");
+    cy.screenshot("/v5.14/caso-01/1-setting-02");
     cy.get("span").contains("Save").click();
     cy.get(
       ":nth-child(1) > .gh-expandable > :nth-child(1) > .gh-expandable-header > .gh-btn > span"
     ).click();
-    cy.screenshot("/v5.14/caso01/1-setting-03");
+    cy.screenshot("/v5.14/caso-01/1-setting-03");
     cy.get("#ember23").click();
   });
 
@@ -46,7 +46,7 @@ describe("Login y acceder a las configuraciones de ghost: Información de public
     cy.get(
       ":nth-child(1) > .gh-expandable > :nth-child(2) > .gh-expandable-header > .gh-btn > span"
     ).click();
-    cy.screenshot("/v5.14/caso01/1-setting-04");
+    cy.screenshot("/v5.14/caso-01/1-setting-04");
     cy.get("select")
       .select("America/Bogota")
       .should("have.value", "America/Bogota")
@@ -56,7 +56,7 @@ describe("Login y acceder a las configuraciones de ghost: Información de public
     cy.get(
       ":nth-child(1) > .gh-expandable > :nth-child(2) > .gh-expandable-header > .gh-btn > span"
     ).click();
-    cy.screenshot("/v5.14/caso01/1-setting-05");
+    cy.screenshot("/v5.14/caso-01/1-setting-05");
     cy.get("#ember23").click();
   });
 
@@ -67,7 +67,7 @@ describe("Login y acceder a las configuraciones de ghost: Información de public
     cy.get(
       ":nth-child(1) > .gh-expandable > :nth-child(3) > .gh-expandable-header > .gh-btn > span"
     ).click();
-    cy.screenshot("/v5.14/caso01/1-setting-06");
+    cy.screenshot("/v5.14/caso-01/1-setting-06");
     cy.get('input[type="text"]')
       .eq(0)
       .invoke("val", "") // Limpia el campo de texto si hay algún valor previo
