@@ -1,0 +1,78 @@
+{
+    "miembros": [
+      {
+        "nombre": "Miembro 1 Grupo # 11",
+        "descripcion": "Esta es la descripción del Miembro 1  # 11"
+      },
+      {
+        "nombre": "Miembro 2 Grupo # 11",
+        "descripcion": "Esta es la descripción del Miembro 2  # 11"
+      },
+      {
+        "nombre": "Miembro 3 Grupo # 11",
+        "descripcion": "Esta es la descripción del Miembro 3  # 11"
+      },
+      {
+        "nombre": "Miembro 4 Grupo # 11",
+        "descripcion": "Esta es la descripción del Miembro 4  # 11"
+      },
+      {
+        "nombre": "Miembro 5 Grupo # 11",
+        "descripcion": "Esta es la descripción del Miembro 5  # 11"
+      }    
+    ],
+    "errores": [
+        {
+            "nombre": "Miembro 1 Grupo # 11",
+            "descripcion": "Esta es la descripción del Miembro 1  # 11",
+            "email": "sin-arrobaemail.com"
+          },
+          {
+            "nombre": "Miembro 2 Grupo # 11",
+            "descripcion": "Esta es la descripción del Miembro 2  # 11",
+            "email": "nombre@.com"
+          },
+          {
+            "nombre": "Miembro 3 Grupo # 11",
+            "descripcion": "Esta es la descripción del Miembro 3  # 11",
+            "email": "nombre@@dominio.com"
+          },
+          {
+            "nombre": "Miembro 4 Grupo # 11",
+            "descripcion": "Esta es la descripción del Miembro 4  # 11",
+            "email": "@dominio.com"
+          },
+          {
+            "nombre": "Miembro 5 Grupo # 11",
+            "descripcion": "Esta es la descripción del Miembro 5  # 11",
+            "email": "nombre@dominio"
+          }    
+    ],
+    "memberError": [
+        {
+            "nombre": "Miembro 1 Grupo # 11",
+            "email": "miembro1@example.com",
+            "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rutrum odio at ex tristique condimentum quis eu tortor. Donec luctus id magna nec molestie. Cras sed dolor a quam scelerisque tincidunt. Nunc fringilla volutpat ante vestibulum ullamcorper. Maecenas sit amet lobortis libero. Phasellus erat nibh, cursus a leo eget, pulvinar maximus mauris. Fusce turpis lacus, condimentum in gravida non, gravida congue lectus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla velit libero, convallis quis orci et, bibendum venenatis dui. Vestibulum sed sapien mi. Donec et scelerisque sapien. In hac habitasse platea dictumst."
+          },
+          {
+            "nombre": "Miembro 2 Grupo # 11",
+            "email": "miembro2@example.com",
+            "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rutrum odio at ex tristique condimentum quis eu tortor. Donec luctus id magna nec molestie. Cras sed dolor a quam scelerisque tincidunt. Nunc fringilla volutpat ante vestibulum ullamcorper. Maecenas sit amet lobortis libero. Phasellus erat nibh, cursus a leo eget, pulvinar maximus mauris. Fusce turpis lacus, condimentum in gravida non, gravida congue lectus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla velit libero, convallis quis orci et, bibendum venenatis dui. Vestibulum sed sapien mi. Donec et scelerisque sapien. In hac habitasse platea dictumst."
+          },
+          {
+            "nombre": "Miembro 3 Grupo # 11",
+            "email": "miembro3@example.com",
+            "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rutrum odio at ex tristique condimentum quis eu tortor. Donec luctus id magna nec molestie. Cras sed dolor a quam scelerisque tincidunt. Nunc fringilla volutpat ante vestibulum ullamcorper. Maecenas sit amet lobortis libero. Phasellus erat nibh, cursus a leo eget, pulvinar maximus mauris. Fusce turpis lacus, condimentum in gravida non, gravida congue lectus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla velit libero, convallis quis orci et, bibendum venenatis dui. Vestibulum sed sapien mi. Donec et scelerisque sapien. In hac habitasse platea dictumst."
+          },
+          {
+            "nombre": "Miembro 4 Grupo # 11",
+            "email": "miembro4@example.com",
+            "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rutrum odio at ex tristique condimentum quis eu tortor. Donec luctus id magna nec molestie. Cras sed dolor a quam scelerisque tincidunt. Nunc fringilla volutpat ante vestibulum ullamcorper. Maecenas sit amet lobortis libero. Phasellus erat nibh, cursus a leo eget, pulvinar maximus mauris. Fusce turpis lacus, condimentum in gravida non, gravida congue lectus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla velit libero, convallis quis orci et, bibendum venenatis dui. Vestibulum sed sapien mi. Donec et scelerisque sapien. In hac habitasse platea dictumst."
+          },
+          {
+            "nombre": "Miembro 5 Grupo # 11",
+            "email": "miembro5@example.com",
+            "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rutrum odio at ex tristique condimentum quis eu tortor. Donec luctus id magna nec molestie. Cras sed dolor a quam scelerisque tincidunt. Nunc fringilla volutpat ante vestibulum ullamcorper. Maecenas sit amet lobortis libero. Phasellus erat nibh, cursus a leo eget, pulvinar maximus mauris. Fusce turpis lacus, condimentum in gravida non, gravida congue lectus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla velit libero, convallis quis orci et, bibendum venenatis dui. Vestibulum sed sapien mi. Donec et scelerisque sapien. In hac habitasse platea dictumst."
+          } 
+    ]
+}
