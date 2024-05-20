@@ -1,0 +1,406 @@
+{
+    "tags": [
+      {
+        "nombre": "Tag 1 Equipo #11",
+        "slug": "tag-1-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 1 del equipo #11",
+        "color": "52ff1f"
+      },
+      {
+        "nombre": "Tag 2 Equipo #11",
+        "slug": "tag-2-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 2 del equipo #11",
+        "color": "ff1f52"
+      },
+      {
+        "nombre": "Tag 3 Equipo #11",
+        "slug": "tag-3-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 3 del equipo #11",
+        "color": "1f52ff"
+      },
+      {
+        "nombre": "Tag 4 Equipo #11",
+        "slug": "tag-4-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 4 del equipo #11",
+        "color": "1fff52"
+      },
+      {
+        "nombre": "Tag 5 Equipo #11",
+        "slug": "tag-5-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 5 del equipo #11",
+        "color": "ff521f"
+      }
+    ],
+    "errorNombre": [
+      {
+        "slug": "tag-1-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 1 del equipo #11",
+        "color": "52ff1f"
+      },
+      {
+        "slug": "tag-2-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 2 del equipo #11",
+        "color": "ff1f52"
+      },
+      {
+        "slug": "tag-3-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 3 del equipo #11",
+        "color": "1f52ff"
+      },
+      {
+        "slug": "tag-4-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 4 del equipo #11",
+        "color": "1fff52"
+      },
+      {
+        "slug": "tag-5-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 5 del equipo #11",
+        "color": "ff521f"
+      }
+    ],
+    "errorColor": [
+      {
+        "nombre": "Tag 1 Equipo #11",
+        "slug": "tag-1-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 1 del equipo #11",
+        "color": "q1q2q3"
+      },
+      {
+        "nombre": "Tag 2 Equipo #11",
+        "slug": "tag-2-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 2 del equipo #11",
+        "color": "z1z2z3"
+      },
+      {
+        "nombre": "Tag 3 Equipo #11",
+        "slug": "tag-3-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 3 del equipo #11",
+        "color": "x1x2x3"
+      },
+      {
+        "nombre": "Tag 4 Equipo #11",
+        "slug": "tag-4-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 4 del equipo #11",
+        "color": "v1v2v3"
+      },
+      {
+        "nombre": "Tag 5 Equipo #11",
+        "slug": "tag-5-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 5 del equipo #11",
+        "color": "y1y2y3"
+      }
+    ],
+    "metaData": [
+      {
+        "nombre": "Tag 1 Equipo #11",
+        "slug": "tag-1-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 1 del equipo #11",
+        "color": "52ff1f",
+        "metaTitle": "Titulo meta title 1",
+        "metaDescripcion": "Descripción meta description 1",
+        "metaUrl": "https://example.com/page1"
+      },
+      {
+        "nombre": "Tag 2 Equipo #11",
+        "slug": "tag-2-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 2 del equipo #11",
+        "color": "ff1f52",
+        "metaTitle": "Titulo meta title 2",
+        "metaDescripcion": "Descripción meta description 2",
+        "metaUrl": "https://example.com/page2"
+      },
+      {
+        "nombre": "Tag 3 Equipo #11",
+        "slug": "tag-3-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 3 del equipo #11",
+        "color": "1f52ff",
+        "metaTitle": "Titulo meta title 3",
+        "metaDescripcion": "Descripción meta description 3",
+        "metaUrl": "https://example.com/page3"
+      },
+      {
+        "nombre": "Tag 4 Equipo #11",
+        "slug": "tag-4-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 4 del equipo #11",
+        "color": "1fff52",
+        "metaTitle": "Titulo meta title 4",
+        "metaDescripcion": "Descripción meta description 4",
+        "metaUrl": "https://example.com/page4"
+      },
+      {
+        "nombre": "Tag 5 Equipo #11",
+        "slug": "tag-5-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 5 del equipo #11",
+        "color": "ff521f",
+        "metaTitle": "Titulo meta title 5",
+        "metaDescripcion": "Descripción meta description 5",
+        "metaUrl": "https://example.com/page5"
+      }
+    ],
+    "twitterCard": [
+      {
+        "nombre": "Tag 1 Equipo #11",
+        "slug": "tag-1-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 1 del equipo #11",
+        "color": "52ff1f",
+        "twitterTitle": "Titulo twitter title 1",
+        "twitterDescription": "Descripcion twitter title 1"
+      },
+      {
+        "nombre": "Tag 2 Equipo #11",
+        "slug": "tag-2-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 2 del equipo #11",
+        "color": "ff1f52",
+        "twitterTitle": "Titulo twitter title 2",
+        "twitterDescription": "Descripcion twitter title 2"
+      },
+      {
+        "nombre": "Tag 3 Equipo #11",
+        "slug": "tag-3-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 3 del equipo #11",
+        "color": "1f52ff",
+        "twitterTitle": "Titulo twitter title 3",
+        "twitterDescription": "Descripcion twitter title 3"
+      },
+      {
+        "nombre": "Tag 4 Equipo #11",
+        "slug": "tag-4-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 4 del equipo #11",
+        "color": "1fff52",
+        "twitterTitle": "Titulo twitter title 4",
+        "twitterDescription": "Descripcion twitter title 4"
+      },
+      {
+        "nombre": "Tag 5 Equipo #11",
+        "slug": "tag-5-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 5 del equipo #11",
+        "color": "ff521f",
+        "twitterTitle": "Titulo twitter title 5",
+        "twitterDescription": "Descripcion twitter title 5"
+      }
+    ],
+    "facebookCard": [
+      {
+        "nombre": "Tag 1 Equipo #11",
+        "slug": "tag-1-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 1 del equipo #11",
+        "color": "52ff1f",
+        "facebookTitle": "Titulo facebook title 1",
+        "facebookDescription": "Descripcion facebook title 1"
+      },
+      {
+        "nombre": "Tag 2 Equipo #11",
+        "slug": "tag-2-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 2 del equipo #11",
+        "color": "ff1f52",
+        "facebookTitle": "Titulo facebook title 2",
+        "facebookDescription": "Descripcion facebook title 2"
+      },
+      {
+        "nombre": "Tag 3 Equipo #11",
+        "slug": "tag-3-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 3 del equipo #11",
+        "color": "1f52ff",
+        "facebookTitle": "Titulo facebook title 3",
+        "facebookDescription": "Descripcion facebook title 3"
+      },
+      {
+        "nombre": "Tag 4 Equipo #11",
+        "slug": "tag-4-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 4 del equipo #11",
+        "color": "1fff52",
+        "facebookTitle": "Titulo facebook title 4",
+        "facebookDescription": "Descripcion facebook title 4"
+      },
+      {
+        "nombre": "Tag 5 Equipo #11",
+        "slug": "tag-5-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 5 del equipo #11",
+        "color": "ff521f",
+        "facebookTitle": "Titulo facebook title 5",
+        "facebookDescription": "Descripcion facebook title 5"
+      }
+    ],
+    "metaDataMultiple": [
+      {
+        "nombre": "Tag 1 Equipo #11",
+        "slug": "tag-1-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 1 del equipo #11",
+        "color": "52ff1f",
+        "metaTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec risus ipsum, pharetra vitae ex in, euismod ultrices augue. Aliquam quam ipsum, fringilla vitae vulputate id, luctus et diam. Duis ac lectus dignissim, tristique sem nec, sagittis neque. Aliquam molestie dui eu nibh semper rhoncus. Phasellus eget nibh dignissim sapien lacinia ultrices.",
+        "metaDescripcion": "Descripción meta description 1",
+        "metaUrl": "https://example.com/page1"
+      },
+      {
+        "nombre": "Tag 2 Equipo #11",
+        "slug": "tag-2-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 2 del equipo #11",
+        "color": "ff1f52",
+        "metaTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec risus ipsum, pharetra vitae ex in, euismod ultrices augue. Aliquam quam ipsum, fringilla vitae vulputate id, luctus et diam. Duis ac lectus dignissim, tristique sem nec, sagittis neque. Aliquam molestie dui eu nibh semper rhoncus. Phasellus eget nibh dignissim sapien lacinia ultrices.",
+        "metaDescripcion": "Descripción meta description 2",
+        "metaUrl": "https://example.com/page2"
+      },
+      {
+        "nombre": "Tag 3 Equipo #11",
+        "slug": "tag-3-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 3 del equipo #11",
+        "color": "1f52ff",
+        "metaTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec risus ipsum, pharetra vitae ex in, euismod ultrices augue. Aliquam quam ipsum, fringilla vitae vulputate id, luctus et diam. Duis ac lectus dignissim, tristique sem nec, sagittis neque. Aliquam molestie dui eu nibh semper rhoncus. Phasellus eget nibh dignissim sapien lacinia ultrices.",
+        "metaDescripcion": "Descripción meta description 3",
+        "metaUrl": "https://example.com/page3"
+      },
+      {
+        "nombre": "Tag 4 Equipo #11",
+        "slug": "tag-4-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 4 del equipo #11",
+        "color": "1fff52",
+        "metaTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec risus ipsum, pharetra vitae ex in, euismod ultrices augue. Aliquam quam ipsum, fringilla vitae vulputate id, luctus et diam. Duis ac lectus dignissim, tristique sem nec, sagittis neque. Aliquam molestie dui eu nibh semper rhoncus. Phasellus eget nibh dignissim sapien lacinia ultrices.",
+        "metaDescripcion": "Descripción meta description 4",
+        "metaUrl": "https://example.com/page4"
+      },
+      {
+        "nombre": "Tag 5 Equipo #11",
+        "slug": "tag-5-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 5 del equipo #11",
+        "color": "ff521f",
+        "metaTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec risus ipsum, pharetra vitae ex in, euismod ultrices augue. Aliquam quam ipsum, fringilla vitae vulputate id, luctus et diam. Duis ac lectus dignissim, tristique sem nec, sagittis neque. Aliquam molestie dui eu nibh semper rhoncus. Phasellus eget nibh dignissim sapien lacinia ultrices.",
+        "metaDescripcion": "Descripción meta description 5",
+        "metaUrl": "https://example.com/page5"
+      }
+    ],
+    "metaDataMultipleDes": [
+      {
+        "nombre": "Tag 1 Equipo #11",
+        "slug": "tag-1-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 1 del equipo #11",
+        "color": "52ff1f",
+        "metaTitle": "Meta title 1",
+        "metaDescripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec risus ipsum, pharetra vitae ex in, euismod ultrices augue. Aliquam quam ipsum, fringilla vitae vulputate id, luctus et diam. Duis ac lectus dignissim, tristique sem nec, rhoncus. Phasellus eget nibh dignissim sapien lacinia ultrices. Donec mattis dui id libero vehicula, ac porta asagittis neque. Aliquam molestie dui eu nibh semper rhoncus. Phasellus eget nibh dignissim sapien lacinia ultrices. Donec mattis dui id libero vehicula, ac porta ",
+        "metaUrl": "https://example.com/page1"
+      },
+      {
+        "nombre": "Tag 2 Equipo #11",
+        "slug": "tag-2-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 2 del equipo #11",
+        "color": "ff1f52",
+        "metaTitle": "Meta title 2",
+        "metaDescripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec risus ipsum, pharetra vitae ex in, euismod ultrices augue. Aliquam quam ipsum, fringilla vitae vulputate id, luctus et diam. Duis ac lectus dignissim, tristique sem nec, rhoncus. Phasellus eget nibh dignissim sapien lacinia ultrices. Donec mattis dui id libero vehicula, ac porta asagittis neque. Aliquam molestie dui eu nibh semper rhoncus. Phasellus eget nibh dignissim sapien lacinia ultrices. Donec mattis dui id libero vehicula, ac porta ",
+        "metaUrl": "https://example.com/page2"
+      },
+      {
+        "nombre": "Tag 3 Equipo #11",
+        "slug": "tag-3-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 3 del equipo #11",
+        "color": "1f52ff",
+        "metaTitle": "Meta title 3",
+        "metaDescripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec risus ipsum, pharetra vitae ex in, euismod ultrices augue. Aliquam quam ipsum, fringilla vitae vulputate id, luctus et diam. Duis ac lectus dignissim, tristique sem nec, rhoncus. Phasellus eget nibh dignissim sapien lacinia ultrices. Donec mattis dui id libero vehicula, ac porta asagittis neque. Aliquam molestie dui eu nibh semper rhoncus. Phasellus eget nibh dignissim sapien lacinia ultrices. Donec mattis dui id libero vehicula, ac porta ",
+        "metaUrl": "https://example.com/page3"
+      },
+      {
+        "nombre": "Tag 4 Equipo #11",
+        "slug": "tag-4-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 4 del equipo #11",
+        "color": "1fff52",
+        "metaTitle": "Meta title 4",
+        "metaDescripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec risus ipsum, pharetra vitae ex in, euismod ultrices augue. Aliquam quam ipsum, fringilla vitae vulputate id, luctus et diam. Duis ac lectus dignissim, tristique sem nec, rhoncus. Phasellus eget nibh dignissim sapien lacinia ultrices. Donec mattis dui id libero vehicula, ac porta asagittis neque. Aliquam molestie dui eu nibh semper rhoncus. Phasellus eget nibh dignissim sapien lacinia ultrices. Donec mattis dui id libero vehicula, ac porta ",
+        "metaUrl": "https://example.com/page4"
+      },
+      {
+        "nombre": "Tag 5 Equipo #11",
+        "slug": "tag-5-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 5 del equipo #11",
+        "color": "ff521f",
+        "metaTitle": "Meta title 5",
+        "metaDescripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec risus ipsum, pharetra vitae ex in, euismod ultrices augue. Aliquam quam ipsum, fringilla vitae vulputate id, luctus et diam. Duis ac lectus dignissim, tristique sem nec, rhoncus. Phasellus eget nibh dignissim sapien lacinia ultrices. Donec mattis dui id libero vehicula, ac porta asagittis neque. Aliquam molestie dui eu nibh semper rhoncus. Phasellus eget nibh dignissim sapien lacinia ultrices. Donec mattis dui id libero vehicula, ac porta ",
+        "metaUrl": "https://example.com/page5"
+      }
+    ],
+    "kaomoji": [
+      {
+        "nombre": "♡₊˚ 🦢・₊✧ ",
+        "slug": "tag-1-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 1 del equipo #11",
+        "color": "52ff1f"
+      },
+      {
+        "nombre": "⋆.ೃ࿔*:･୧ ‧₊˚ 🎐 ⋅*ੈ✩‧₊˚",
+        "slug": "tag-2-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 2 del equipo #11",
+        "color": "ff1f52"
+      },
+      {
+        "nombre": "✧ദ്ദി( ˶^ᗜ^˶ )",
+        "slug": "tag-3-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 3 del equipo #11",
+        "color": "1f52ff"
+      }
+    ],
+    "hebreo": [
+      {
+        "nombre": "שם 1",
+        "slug": "tag-1-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 1 del equipo #11",
+        "color": "52ff1f"
+      },
+      {
+        "nombre": "זה שם 2",
+        "slug": "tag-2-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 2 del equipo #11",
+        "color": "ff1f52"
+      },
+      {
+        "nombre": "שם המבחן שלוש בעברית",
+        "slug": "tag-3-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 3 del equipo #11",
+        "color": "1f52ff"
+      }
+    ],
+    "metaDataErr": [
+      {
+        "nombre": "Tag 1 Equipo #11",
+        "slug": "tag-1-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 1 del equipo #11",
+        "color": "52ff1f",
+        "metaTitle": "Titulo meta title 1",
+        "metaDescripcion": "Descripción meta description 1",
+        "metaUrl": "https://example"
+      },
+      {
+        "nombre": "Tag 2 Equipo #11",
+        "slug": "tag-2-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 2 del equipo #11",
+        "color": "ff1f52",
+        "metaTitle": "Titulo meta title 2",
+        "metaDescripcion": "Descripción meta description 2",
+        "metaUrl": "https://example/page2"
+      },
+      {
+        "nombre": "Tag 3 Equipo #11",
+        "slug": "tag-3-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 3 del equipo #11",
+        "color": "1f52ff",
+        "metaTitle": "Titulo meta title 3",
+        "metaDescripcion": "Descripción meta description 3",
+        "metaUrl": "https://example/page3"
+      },
+      {
+        "nombre": "Tag 4 Equipo #11",
+        "slug": "tag-4-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 4 del equipo #11",
+        "color": "1fff52",
+        "metaTitle": "Titulo meta title 4",
+        "metaDescripcion": "Descripción meta description 4",
+        "metaUrl": "https://example/page4"
+      },
+      {
+        "nombre": "Tag 5 Equipo #11",
+        "slug": "tag-5-equipo-11",
+        "descripcion": "Esta es la descripción para el tag 5 del equipo #11",
+        "color": "ff521f",
+        "metaTitle": "Titulo meta title 5",
+        "metaDescripcion": "Descripción meta description 5",
+        "metaUrl": "https://example/page5"
+      }
+    ]
+}
+  

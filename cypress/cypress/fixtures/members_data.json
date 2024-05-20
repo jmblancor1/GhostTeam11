@@ -74,5 +74,41 @@
             "email": "miembro5@example.com",
             "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rutrum odio at ex tristique condimentum quis eu tortor. Donec luctus id magna nec molestie. Cras sed dolor a quam scelerisque tincidunt. Nunc fringilla volutpat ante vestibulum ullamcorper. Maecenas sit amet lobortis libero. Phasellus erat nibh, cursus a leo eget, pulvinar maximus mauris. Fusce turpis lacus, condimentum in gravida non, gravida congue lectus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla velit libero, convallis quis orci et, bibendum venenatis dui. Vestibulum sed sapien mi. Donec et scelerisque sapien. In hac habitasse platea dictumst."
           } 
+    ],
+    "kaomoji": [
+      {
+        "nombre": "♡₊˚ 🦢・₊✧ ",
+        "descripcion": "Esta es la descripción del Miembro 1  # 11"
+      },
+      {
+        "nombre": "⋆.ೃ࿔*:･୧ ‧₊˚ 🎐 ⋅*ੈ✩‧₊˚",
+        "descripcion": "Esta es la descripción del Miembro 2  # 11"
+      },
+      {
+        "nombre": "✧ദ്ദി( ˶^ᗜ^˶ )",
+        "descripcion": "Esta es la descripción del Miembro 3  # 11"
+      }
+    ],
+    "nameErrores": [
+      {
+        "nombre": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec risus ipsum, pharetra vitae ex in, euismod ultrices augue. Aliquam quam ipsum, fringilla vitae vulputate id, luctus et diam. Duis ac lectus dignissim, tristique sem nec, sagittis neque. Aliquam molestie dui eu nibh semper rhoncus. Phasellus eget nibh dignissim sapien lacinia ultrices.",
+        "descripcion": "Esta es la descripción del Miembro 1  # 11"
+      },
+      {
+        "nombre": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec risus ipsum, pharetra vitae ex in, euismod ultrices augue. Aliquam quam ipsum, fringilla vitae vulputate id, luctus et diam. Duis ac lectus dignissim, tristique sem nec, sagittis neque. Aliquam molestie dui eu nibh semper rhoncus. Phasellus eget nibh dignissim sapien lacinia ultrices.",
+        "descripcion": "Esta es la descripción del Miembro 2  # 11"
+      },
+      {
+        "nombre": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec risus ipsum, pharetra vitae ex in, euismod ultrices augue. Aliquam quam ipsum, fringilla vitae vulputate id, luctus et diam. Duis ac lectus dignissim, tristique sem nec, sagittis neque. Aliquam molestie dui eu nibh semper rhoncus. Phasellus eget nibh dignissim sapien lacinia ultrices.",
+        "descripcion": "Esta es la descripción del Miembro 3  # 11"
+      },
+      {
+        "nombre": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec risus ipsum, pharetra vitae ex in, euismod ultrices augue. Aliquam quam ipsum, fringilla vitae vulputate id, luctus et diam. Duis ac lectus dignissim, tristique sem nec, sagittis neque. Aliquam molestie dui eu nibh semper rhoncus. Phasellus eget nibh dignissim sapien lacinia ultrices.",
+        "descripcion": "Esta es la descripción del Miembro 4  # 11"
+      },
+      {
+        "nombre": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec risus ipsum, pharetra vitae ex in, euismod ultrices augue. Aliquam quam ipsum, fringilla vitae vulputate id, luctus et diam. Duis ac lectus dignissim, tristique sem nec, sagittis neque. Aliquam molestie dui eu nibh semper rhoncus. Phasellus eget nibh dignissim sapien lacinia ultrices.",
+        "descripcion": "Esta es la descripción del Miembro 5  # 11"
+      }    
     ]
 }
