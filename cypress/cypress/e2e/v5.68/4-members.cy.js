@@ -145,5 +145,5 @@ describe("Login y escenarios para members", () => {
       }
       cy.get('div.gh-btn.gh-btn-icon.gh-btn-action-icon').click();
       cy.screenshot(`/v5.14/caso18/12-click-close-icon`);
-});
+  });
 });
