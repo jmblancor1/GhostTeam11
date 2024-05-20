@@ -80,5 +80,5 @@ describe("Login y escenarios para tags", () => {
       cy.get('.modal-footer').find('button').contains('Delete').click();
       cy.screenshot('/v5.14/caso20/12-click-delete-tag-modal');
       cy.wait(5000);
-    });
+  });
 });
