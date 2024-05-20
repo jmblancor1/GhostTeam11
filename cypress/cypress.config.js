@@ -10,6 +10,8 @@ module.exports = defineConfig({
     screenshotsFolder: 'cypress/screenshots',
     viewportWidth: 1280,
     viewportHeight: 800,
+    defaultCommandTimeout: 60000,
+    pageLoadTimeout: 120000,
 
     setupNodeEvents(on, config) {
       // implement node event listeners here
