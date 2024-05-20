@@ -1,0 +1,37 @@
+[
+    {
+        "sentence": "orchestrate user-centric applications",
+        "longField": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rutrum odio at ex tristique condimentum quis eu tortor. Donec luctus id magna nec molestie. Cras sed dolor a quam scelerisque tincidunt. Nunc fringilla volutpat ante vestibulum ullamcorper. Maecenas sit amet lobortis libero. Phasellus erat nibh, cursus a leo eget, pulvinar maximus mauris. Fusce turpis lacus, condimentum in gravida non, gravida congue lectus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla velit libero, convallis quis orci et, bibendum venenatis dui. Vestibulum sed sapien mi. Donec et scelerisque sapien. In hac habitasse platea dictumst.",
+        "url": "http://newyorker.com",
+        "validHour": "18:22",
+        "invalidHour": "37:89"
+    },
+    {
+        "sentence": "aggregate holistic solutions",
+        "longField": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rutrum odio at ex tristique condimentum quis eu tortor. Donec luctus id magna nec molestie. Cras sed dolor a quam scelerisque tincidunt. Nunc fringilla volutpat ante vestibulum ullamcorper. Maecenas sit amet lobortis libero. Phasellus erat nibh, cursus a leo eget, pulvinar maximus mauris. Fusce turpis lacus, condimentum in gravida non, gravida congue lectus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla velit libero, convallis quis orci et, bibendum venenatis dui. Vestibulum sed sapien mi. Donec et scelerisque sapien. In hac habitasse platea dictumst.",
+        "url": "http://baidu.com",
+        "validHour": "16:31",
+        "invalidHour": "85:90"
+    },
+    {
+        "sentence": "expedite B2B functionalities",
+        "longField": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rutrum odio at ex tristique condimentum quis eu tortor. Donec luctus id magna nec molestie. Cras sed dolor a quam scelerisque tincidunt. Nunc fringilla volutpat ante vestibulum ullamcorper. Maecenas sit amet lobortis libero. Phasellus erat nibh, cursus a leo eget, pulvinar maximus mauris. Fusce turpis lacus, condimentum in gravida non, gravida congue lectus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla velit libero, convallis quis orci et, bibendum venenatis dui. Vestibulum sed sapien mi. Donec et scelerisque sapien. In hac habitasse platea dictumst.",
+        "url": "https://latimes.com",
+        "validHour": "08:52",
+        "invalidHour": "50:72"
+    },
+    {
+        "sentence": "deploy extensible e-tailers",
+        "longField": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rutrum odio at ex tristique condimentum quis eu tortor. Donec luctus id magna nec molestie. Cras sed dolor a quam scelerisque tincidunt. Nunc fringilla volutpat ante vestibulum ullamcorper. Maecenas sit amet lobortis libero. Phasellus erat nibh, cursus a leo eget, pulvinar maximus mauris. Fusce turpis lacus, condimentum in gravida non, gravida congue lectus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla velit libero, convallis quis orci et, bibendum venenatis dui. Vestibulum sed sapien mi. Donec et scelerisque sapien. In hac habitasse platea dictumst.",
+        "url": "https://google.nl",
+        "validHour": "00:23",
+        "invalidHour": "41:59"
+    },
+    {
+        "sentence": "benchmark bricks-and-clicks experiences",
+        "longField": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rutrum odio at ex tristique condimentum quis eu tortor. Donec luctus id magna nec molestie. Cras sed dolor a quam scelerisque tincidunt. Nunc fringilla volutpat ante vestibulum ullamcorper. Maecenas sit amet lobortis libero. Phasellus erat nibh, cursus a leo eget, pulvinar maximus mauris. Fusce turpis lacus, condimentum in gravida non, gravida congue lectus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla velit libero, convallis quis orci et, bibendum venenatis dui. Vestibulum sed sapien mi. Donec et scelerisque sapien. In hac habitasse platea dictumst.",
+        "url": "http://w3.org",
+        "validHour": "10:12",
+        "invalidHour": "92:99"
+    },
+]
