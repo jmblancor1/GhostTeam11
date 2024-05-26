@@ -62,10 +62,17 @@ console.log(inputValues);
       temp_directory = `${basePath}/temp` + b;
       graphFilenameRoot = `${basePath}/graph`;
       //Launch the current browser context
-      const iPhone11 = devices['iPhone 11'];
+      const deviceList = [
+        devices['iPhone 11 Pro'],
+        devices['Pixel 2'],
+        devices['iPad Pro 11'],
+        devices['Galaxy S9+'],
+        devices['Nexus 10']
+      ];
+      const randomDevice = deviceList[Math.floor(Math.random() * deviceList.length)]
       const browser = await playwright[b].launch({headless: false, viewport: {width:viewportWidth, height:viewportHeight}});
       const context = await browser.newContext({
-        ...iPhone11
+        ...randomDevice
       });
       const page = await context.newPage();
 
