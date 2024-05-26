@@ -4,10 +4,10 @@ var fs = require('fs');
 var path = require('path');
 
 async function fetchMockarooData() {
-    const response = await axios.getAdapter('https://my.api.mockaroo.com/users.json?key=07b034f0', {
+    const response = await axios.getAdapter('https://my.api.mockaroo.com/data_a_priori.json', {
         params: {
             key: '07b034f0',
-            schema: 'Users',
+            schema: 'Data a priori',
             count: 1
         }
     });

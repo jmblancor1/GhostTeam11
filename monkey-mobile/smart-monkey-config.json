@@ -1,0 +1,23 @@
+{
+    "projectId":"TSDL-Smart-Monkey-with-cypress",
+    "baseUrl":"https://ghost-v5-8wq2.onrender.com/ghost/#/dashboard",
+    "env":{
+        "appName":"App prueba",
+        "events":1200,
+        "delay":300,
+        "seed":1234,
+        "pctClicks":1200,
+        "pctScroll":100,
+        "pctSelectors":100,
+        "pctKeys":100,
+        "pctSpKeys":100,
+        "pctPgNav":12,
+        "pctBwChaos":12,
+        "pctActions":50
+    },
+    "integrationFolder": "./cypress/integration/monkey",
+    "pluginsFile": "./cypress/plugins/index.js",
+    "pageLoadTimeout":120000,
+    "testFiles": "smart-monkey.js",
+    "videosFolder":"./results"
+}
