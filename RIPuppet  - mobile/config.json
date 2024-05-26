@@ -1,0 +1,11 @@
+{
+    "url": "https://ghost-v5-8wq2.onrender.com/ghost/#/signin",
+    "url_ghost_functionality": "https://ghost-v5-8wq2.onrender.com/ghost/#/pages",
+    "headless": true,
+    "depthLevels": 1,
+    "inputValues": false,
+    "values": {"identification": "df.guerrerov1@uniandes.edu.co",
+        "password": "qwerty1234"
+        },
+    "browsers": ["chromium", "firefox"]
+}
