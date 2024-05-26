@@ -1,7 +1,6 @@
 {
   "name": "kraken",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,6 +9,8 @@
   "license": "ISC",
   "dependencies": {
     "android-platform-tools": "^3.0.2",
+    "axios": "^1.7.0",
     "kraken-node": "^1.0.24"
-  }
+  },
+  "description": "> En cuanto a las versiones que se usaron para correr las pruebas en esta herramienta, tenemos las siguientes:\r >\r > - **Node:** 20.12.2\r > - **npm:** 10.5.0\r >\r > Estas versiones fueron instaladas descargando la última versión con soporte a largo plazo (LTS) presente en la página de [node](https://nodejs.org/en/)."
 }
